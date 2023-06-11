@@ -1,0 +1,44 @@
+@startuml
+left to right direction
+actor "Antek" as an
+rectangle Czynności_rutynowe {
+usecase "Scieli łóżko" as UC1
+usecase "Myje zęby" as UC2
+usecase "Sprząta zabawki  \n 1/dz /30 min" as UC3
+usecase UC4 as "Myje zeby
+--
+2x/dz
+--
+5 min"
+
+}
+an --> UC1
+an --> UC2
+an --> UC3
+an --> UC4
+
+package Choroba {
+usecase "Robi inhalacje \n 3x/dz /15 min" as UC10
+usecase "Zarzywa leki" as UC11
+usecase "Czyści nos \n 3x/dz /15 min" as UC12
+usecase "Pije dużo wody" as UC13
+}
+
+an --> UC10
+an --> UC11
+an --> UC12
+an --> UC13
+
+package Starszy_brat {
+usecase "Pilnuje" as UC20
+usecase "Daje przykład" as UC21
+usecase "Opiekuje się" as UC22
+}
+
+an --> UC20
+an --> UC21
+an --> UC22
+
+
+
+@enduml

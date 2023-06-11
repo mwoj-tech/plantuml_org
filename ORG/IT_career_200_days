@@ -1,0 +1,48 @@
+@startgantt
+Project starts 2023-05-01
+printscale weekly
+'saturday are closed
+'sunday are closed
+
+
+
+[HTML & CSS] lasts 20 days
+[HTML & CSS] starts 2023-05-01
+[HTML & CSS] is 0% completed
+
+[JavaScript] lasts 14 days
+[JavaScript] starts 2023-05-21
+[JavaScript] is 0% completed
+
+[Bootstrap] lasts 10 days
+[Bootstrap] starts 2023-06-04
+[Bootstrap] is 0% completed
+
+[React] lasts 13 days
+[React] starts 2023-06-14
+[React] is 0% completed
+
+
+[Python] lasts 30 days
+[Python] starts 2023-06-27
+[Python] is 0% completed
+
+[Django & Node.js] lasts 30 days
+[Django & Node.js] starts 2023-07-27
+[Django & Node.js] is 0% completed
+[Mongo DB & Postgres] lasts 20 days
+[Mongo DB & Postgres] starts 2023-08-26
+[Mongo DB & Postgres] is 0% completed
+
+[Git & Github] lasts 18 days
+[Git & Github] starts 2023-09-14
+[Git & Github] is 0% completed
+
+[Rest API or JSON API] lasts 11 days
+[Rest API or JSON API] starts 2023-10-02
+[Rest API or JSON API] is 0% completed
+
+[AWS] lasts 11 days
+[AWS] starts 2023-10-13
+[AWS] is 0% completed
+@endgantt

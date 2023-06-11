@@ -1,0 +1,4 @@
+@startuml
+CMD --> eap: SL0, SL1, SL2, SL3, SL4, SL5, SL6, SL7, SL8, SL9
+eap -> CMD: Poz, Ko, dPo, dKo
+@enduml

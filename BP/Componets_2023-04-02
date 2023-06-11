@@ -1,0 +1,14 @@
+@startuml
+
+package BP {
+    
+    [M01 - Mapa]
+    [M02 - Odtwarzanie muzyki]
+    [M05 - Odtwrzanie dźwięków]
+    [M03 - Kontakt]
+    [M04 - About]
+    [M06 - Zarządzanie kontami]
+
+}
+
+@enduml

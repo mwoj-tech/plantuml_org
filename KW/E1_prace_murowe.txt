@@ -1,0 +1,19 @@
+@startgantt
+Project starts 2023-04-02
+'printscale weekly
+'saturday are closed
+sunday are closed
+
+[G-K Kuchnia] lasts 1 days
+[G-K Kuchnia] starts 2023-04-02
+[G-K Kuchnia] is 0% completed
+
+[Mocowanie stelarz Ł] lasts 1 day
+[Mocowanie stelarz Ł] starts 2023-04-15
+[Mocowanie stelarz Ł] is 0% completed
+
+[G-K stelarz Ł] lasts 1 day
+[G-K stelarz Ł] starts 2023-04-08
+[G-K stelarz Ł]  is 0% completed
+
+@endgantt

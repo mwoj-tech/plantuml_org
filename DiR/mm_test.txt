@@ -1,0 +1,11 @@
+@startmindmap
+*_ Tadeusz Wójcik
+**_ Andrzej Wójcik
+***_ Mateusz Wójcik
+****_ Antoni Wójcik
+****_ Franciszek Wójcik
+***_ Łukasz Wojcik
+**_ Ewa Wójcik
+**_ Ela Wójcik
+@endmindmap
+

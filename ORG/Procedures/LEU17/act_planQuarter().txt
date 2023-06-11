@@ -1,0 +1,23 @@
+@startuml
+start
+:yv - skreśl;
+:Analiza postępów;
+:Określenie priorytetów;
+:Zaplanowanie wyjazdów 
+z 1 nocowaniem;
+:DDR backlog;
+if (wyjazd zaplanowany?) equals (tak) then
+:idź dalej;
+else
+:zaplanój wyjazd;
+endif
+:czynności z act_mP;
+repeat
+:zrób coś;
+:rób dla każdego miesiąca;
+repeat while (more data?) is (yes)
+->no;
+
+
+stop
+@enduml

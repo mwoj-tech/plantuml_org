@@ -1,0 +1,43 @@
+@startmindmap
++ Optymalizacja detekcji
+++ Rejestr testów
++++_ .xls
++++_ Parametry config
++++_ Parametry pix4d
+++ Zdjęcia
++++_ Zdywersyfikowane
+++++_ Oświetlenie
++++++_ pory
+++++++_ roku
+++++++_ dnia
+++++_ Pogoda
+++ Labele
++++_ Rozbudowa
+++++_ Podsystemy
++++++_ INF
++++++_ ENE
++++++_ SRK
++++++_ RK
++++++_ np. SRK
++++_ Rezygnacja
+++++_ lo
++++_ Sposób
+++++_ Prostokąt
+++++_ Wielokąt
++++_ Zliczanie
+++++_ Zachowanie proporcji
+++++_ Oznaczanie modeli (EEA-4, L826H)
++++_ Kontekstowe
+++++_ z tłem
+++ Lot
++++_ Pułap
++++_ Kąt 
+++ Silnik detekcji
++++_ zmiana
+++++_ Retinanet
+++ Modele
++++_ Podział
+++++_ Ze względu na podsystem
++++++_ Trenowanie
+++++++_ > Rozdzielczość
+@endmindmap

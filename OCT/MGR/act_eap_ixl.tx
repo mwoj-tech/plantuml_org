@@ -1,0 +1,13 @@
+@startuml
+|Eap|
+start
+:Danie pozwolenia;
+|#AntiqueWhite|IXL|
+:Otrzymanie pozwolenia;
+:foo3;
+|Eap|
+:foo4;
+|IXL|
+:foo5;
+stop
+@enduml

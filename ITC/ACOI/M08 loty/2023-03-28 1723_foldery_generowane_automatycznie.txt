@@ -1,0 +1,21 @@
+@startsalt
+{
+
+{T
+**Katalog** 
+order_a 
++area_a 
+++1_uav_data
++++2_oblique 
+++++<color: green>mission_a 
++++++<color: green>1_flight_vector 
++++++<color: green>2_raw_photos
+
++++2_ortho 
+++++<color: green>mission_a 
++++++<color: green>1_flight_vector 
++++++<color: green>2_raw_photos
+
+}
+}
+@endsalt

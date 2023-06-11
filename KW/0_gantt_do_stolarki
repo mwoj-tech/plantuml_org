@@ -1,0 +1,64 @@
+@startgantt
+Project starts 2023-04-02
+printscale weekly
+'saturday are closed
+sunday are closed
+
+[E0 - Pożyczka] lasts 15 days
+
+[E1- Prace murowe] lasts 17 days
+[E1- Prace murowe] starts 2023-04-02
+
+[G-K wanna] lasts 17 days
+[G-K wanna] starts 2023-04-02
+
+[E1.1 - Gładzie] lasts 14 days
+[E1.1 - Gładzie] starts 2023-04-20
+
+[E2 - Układanie płytek] lasts 22 days
+[E2 - Układanie płytek] starts 2023-05-01
+
+[Płytki łazienka podłoga] lasts 22 days
+[Płytki łazienka podłoga] starts 2023-05-01
+[E2 - Układanie płytek] starts 2023-05-01
+
+[E3 - Montaż biały] lasts 2 days
+[E3 - Montaż biały] starts 2023-05-27
+
+[E4 - Podłogi i schody] lasts 22 days
+[E4 - Podłogi i schody] starts 2023-06-01
+
+[E5 - Montaż ościeżnic] lasts 7 days
+[E5 - Montaż ościeżnic] starts 2023-06-25
+
+[E6 - Kuchnia montaż AGD] lasts 30 days
+[E6 - Kuchnia montaż AGD] starts 2023-06-01
+
+[Stolarka Kuchnia] lasts 30 days
+[Stolarka Kuchnia] starts 2023-07-01
+
+[Stolarka Łazienka] lasts 30 days
+[Stolarka Łazienka] starts 2023-07-01
+
+[E7 - Wstawianie mebli w zabudowie] lasts 50 days
+[E7 - Wstawianie mebli w zabudowie] starts 2023-07-01
+
+[E8 - Montaż cokołów] lasts 3 days
+[E8 - Montaż cokołów] starts 2023-08-15
+
+[E8 - Malowanie sufitów i ścian] lasts 14 days
+[E8 - Malowanie sufitów i ścian] starts 2023-08-20
+
+
+[E9 - Montaż mebli i aranżacja] lasts 20 days
+[E9 - Montaż mebli i aranżacja] starts 2023-09-05
+
+[E10 - Przeprowadzka] lasts 3 weeks
+[E10 - Przeprowadzka] starts 2023-10-01 
+
+
+[E7 - Wstawianie mebli w zabudowie] starts at [E0 - Pożyczka]'s end
+
+
+
+@endgantt

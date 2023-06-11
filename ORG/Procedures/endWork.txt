@@ -1,0 +1,13 @@
+@startuml
+title endWork 
+start
+:[ x] windowDesktop.declutter();
+:[ x] desktop.clean();
+:[ x] room.clean();
+:[ x] activities.write();
+partition ORG {
+:[ ] LEU17.fastUpdate();
+}
+
+stop
+@enduml

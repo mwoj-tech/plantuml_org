@@ -1,0 +1,15 @@
+@startuml
+package Moduł_Blokady_Eap {
+[Automat zależnościowy]
+[Moduł wykrywający sekwencję]
+[Generator sygnałów transmisyjnych]
+[Generator komunikatów]
+[Generator stanu AWARII]
+}
+'interfaces
+TDS -left-> [Moduł wykrywający sekwencję]
+IXL -up-> [Automat zależnościowy]
+[Automat zależnościowy] -up-> IXL
+
+
+@enduml

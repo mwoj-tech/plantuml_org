@@ -1,0 +1,82 @@
+@startuml
+title Repo managment procedure (uploading data from drone)
+start
+
+
+partition sending_data_to_repo {
+
+    if (Data aquisition with own drone?) then (yes)
+        :Copy photo data from 
+        SD card to local computer;
+        :Send data to server 
+        where repo is located
+        using FTP protocol;
+    
+    else (no)
+        :Request cloud drive link
+        from the provider;
+        :Download data directly to the 
+        server where repo is located;
+
+    endif
+}
+
+partition create_backup {
+:compress each mission to .7z or zip format ;
+:compress each to day .7z or zip format;
+:move zipped data to backup directory;
+}
+
+partition arrange_material {
+
+    if (pitch of mission = ) then (oblique)
+        :Copy to ".\1_uav_data\2_oblique";
+            
+    else (ortho)
+        :Copy to ".\1_uav_data\2_ortho";
+
+    endif
+
+    while (there is any subdir \n in mission folder) is (yes)
+        :put photos directly in mission directory;
+        :delete empty folders;
+    endwhile (no)
+
+
+}
+partition change_to_unique_names {
+    : Rename files using
+    Bulk Rename Utility
+    or Power Toys;
+    :give prefix as mission ID;
+        note right
+            always 2 digits
+            e.g. "N03_" or "S12_" 
+        end note
+    :give prefix as date;
+        note right
+            YYYY-MM-DD format
+        end note
+    
+    :change photos to ".jpg" extension;
+    note right
+        lower case letters
+    end note
+
+}
+
+partition copy_to_detection {
+:copy;
+}
+
+:Inform Expert the data is 
+ready for detection processing;
+:Inform Expert the data is 
+ready for photogrametry processing;
+partition declutter {
+:delete unnecesary data to create space;
+}
+
+
+stop
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+title StartDay 
+start
+:Q20.alarm(wim);
+:energyDrink.drink(at_once);
+:m.wim(as_alarm,10 min);
+:kindle.read();
+:m.makeBed();
+:m.exercise(20min);
+:pijama.putOnPlace();
+:szlafrok.putOnPlace();
+:m.coldShower();
+:dailyPlanning();
+:m.swollowIzotek();
+:m.**startWork()**;
+stop
+@enduml

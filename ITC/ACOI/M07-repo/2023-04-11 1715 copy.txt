@@ -1,0 +1,126 @@
+@startsalt
+{
+**Moduły:**
+.
+M01 Moduł kontroli dostępu 
+M02 Moduł zarządzania użytkownikami 
+<color: blue>M03 Moduł zarządzania zleceniami 
+<color: green>M04 Moduł zarządzania operacjami lotniczymi 
+<color: red>M05 Moduł detekcji obiektów infrastruktury kolejowej	
+<color: orange>M06 Moduł pozycjonowania obiektów infrastruktury kolejowej	
+M07 Moduł repozytorium 
+<color: purple>M08 Moduł prezentacji wyników 
+M09 Moduł dziennika zlecenia 
+M10 Moduł dziennika systemowego  
+M11 Moduł przetwarzania planów schematycznych 
+<color: olive>M12 Moduł agregacji opisu EIK 
+M13 Moduł ręcznego tworzenia i edytowania obiektów infrastruktury kolejowej 
+M14 Moduł szkolenia modelu	
+.
+.
+
+
+{T
+**Katalog** | **Mod. współ.** | **Rozsz.** | **Opis**
+root 
++1_training|M05?|<DIR>|Dane związne z trenowaniem modelu
+++oblique |-|<DIR>
++++trenowanie |-|<DIR>
+++++gdrive |-|<DIR>
++++++train |-|<DIR>
++++++valid |-|<DIR>
+++++images |-|<DIR>
+++++labels |-|<DIR>
+++ortho |-|<DIR>
++++trenowanie |-|<DIR>
+++++gdrive |-|<DIR>
++++++train |-|<DIR>
++++++valid |-|<DIR>
+++++images |-|<DIR>
+++++labels |-|<DIR>
++2_data_processing |-|<DIR>
+++classes |-|<DIR>
++++oblique |-|<DIR>
++++ortho |-|<DIR>
+++models |-|<DIR>
++++oblique |-|<DIR> 
++++ortho |-|<DIR>
++3_orders |-|<DIR>
+++order_a |-|<color: blue><DIR>
++++area_a |-|<color: blue><DIR>
+++++0_docs | <color: blue>M03 |<color: blue><DIR> | Wgrywanie dokumentacji (planów schem) za pomocą formularza
++++++plan_schematyczny.pdf |-|.pdf
+++++1_uav_data |-|<color: blue><DIR>| Dane związane akwizycją dronem
++++++0_area_vector|-|<color: blue><DIR>| Katalog w którym zapisany jest plik shp obejmujący cały obszar (powierzchniowo)
+++++++area_a.shp|-|.shp .kml| shp obszaru
++++++1_cgp|-|<color: blue><DIR>| Katalog zapisu pomiarów gps fotopuntków terenowych
+++++++fotopunkty.txt|-|.txt
++++++2_oblique |-|<color: blue><DIR> 
+++++++mission_a |<color: green>M04|<color: green><DIR>
++++++++1_flight_vector |<color: green>M04|<color: green><DIR>
+++++++++a.shp |-|.shp .kml
++++++++2_raw_photos|-|<color: green><DIR>
+++++++++DJI_0001.jpg|-|.jpg
+++++++mission_b |<color: green>M04|<color:green><DIR>
++++++++[...] |.|<DIR>
++++++3_ortho |-|<color: blue><DIR>
+++++++mission_a |<color: green>M04|<color: green><DIR>
++++++++1_flight_vector |<color: green>M04|<color: green><DIR>
+++++++++a.shp |-|.shp .kml
++++++++2_raw_photos|-|<color: green><DIR>
+++++++++DJI_0001.jpg|-|.jpg
+++++++mission_b |<color: green>M04|<color:green><DIR>
++++++++[...] |.|<DIR>
+++++2_pix4d_output |-|<DIR>
++++++<color: red>exif |-|<DIR>
++++++<color: red>turbo_OGC |-|<DIR>
++++++pix4d_project_1 |-|<DIR>
+++++++1_spatial_range |-|<DIR>|Dane do porządkowania przedstrzennego zdjęć pod projekty pix4d
++++++++range1.shp |.|.shp
++++++++photo_list1.txt|-|.txt?| Lista zdjęć (ok. 2 tyś) wyselekcjonowana przestrzennie z pliku .shp
+++++++2_output |-|<DIR>
++++++++0_params|<color: orange>M06|<DIR>|Elementy orientacji
+++++++++calibrated_external_camera_parameters.txt|-|.txt
+++++++++calibrated_camera_parameters.txt|-|.txt
+++++++++calibrated_internal_camera_parameters.cam|-|.txt
++++++++1_DMT|<color: orange>M06|<DIR>
+++++++++dmt1.tiff|-|.tiff|Numeryczny model terenu do zczytywania wysokości
++++++++2_orthophotomosaic|<color: purple>M08|<DIR>
+++++++++orthophotomosaic1.tiff|.|.tiff|Ortofotomapa do wyświetlania w M08 
+++++++projekt1.p4d|.|.p4d|Projekt w programu pix4dmapper
++++++pix4d_project_2|.|<DIR>
+++++++[...]
+++++3_processing |-|<color: blue><DIR>
++++++0_input|-|<color: blue><DIR>|Zdjęcia powinny mieć unikatowe nazwy w ramach 1 projektu
+++++++config
++++++++config.xml|-|.xml
+++++++oblique |<color: red>M05|<color: blue><DIR>
++++++++img.jpg |-|.jpg
+++++++ortho |<color: red>M05|<color: blue><DIR>
++++++++img.jpg |-|.jpg
++++++1_detection_module|.|<color: blue><DIR>|Zapisywanie wyników z modułu detekcji
+++++++processing_1 |.|<color: red><DIR>
++++++++ortho |<color: red>M05|<color: red><DIR>
+++++++++imgn.jpg|-|.jpg|Zdjęcia z labelami
++++++++ukosne |<color: red>M05|<color: red><DIR>
+++++++++imgn.jpg|-|.jpg|Zdjęcia z labelami
++++++++detected_objects|<color: red>M05|<color: red><DIR>
+++++++++detected_objects_n.json |-|.json
+++++++[...]|.|.
+++++++processing_n|.|<color: red><DIR>
++++++2_attributes_detection_module|M0X?|<color: blue><DIR>|Zapisywanie z modułu detekcji cech szczegółowych
+++++++processing_1|.|<DIR>
+++++++[...]
+++++++processing_n|.|<DIR>
++++++3_positioning_module|<color: orange>M06|<color: blue><DIR>|Zapisywanie z modułu pozycjonowania
+++++++positioning_output.geojson|.|.geojson
++++++4_eik_aggregation|<color: olive>M12|<color: blue><DIR>|Zapisywanie z modułu agregacji opisu EIK
+++++++final_output.geojson|.|.geojson
++++area_b |-|<DIR>
+++++[...] |-
+++order_b |-|<DIR>
++++[...] |-|
+
+}
+}
+@endsalt

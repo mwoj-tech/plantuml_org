@@ -1,0 +1,58 @@
+@startuml
+package "LEU17" {
+
+    [Year view] as yv
+    [Month view] as mv
+    [Week view] as mv
+    [Project plan] as pp
+
+    node Phone_book{
+        [Backlog] as bl
+        [Org sheet] as org
+        [Imieniny] as im
+    }
+    node Notes {
+        [Priorities \n sheet] as ps
+        [Memory palace] as mm
+        [Procedure list]
+    }
+    
+    node Procedures {
+        [endDay()] as eD
+        [startDay()] as sD  
+
+            frame Work {
+                [startWorking()] as sW
+                [endWorking()] as eW
+            }
+
+            frame Familly {
+                [family2Car()] as f2C
+                [af2school()] as af2S
+            }
+
+            frame LEU17_Procedures {
+                [changeByNewYear()] as nY 
+                [setPriorities()] as sP
+                [planQuarter()] as pQ
+                [planMonth()] as pM
+                [planWeek()] as pW
+                [fastUpdate()] as fU
+            }
+
+
+    }
+    
+    note top of yv
+        yv
+    end note
+
+'pp --> bl
+'mm --> im
+'mv <-- interface
+'mv <.. interface2
+
+
+}
+
+@enduml

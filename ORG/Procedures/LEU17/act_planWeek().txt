@@ -1,0 +1,23 @@
+@startuml
+start
+:set priorites;
+:put out backlog;
+partition routine_analysis {
+:check rw;
+:check r2w;
+:rm;
+:rq;
+:r2y;
+:ry;
+}
+partition backlog_analysis {
+:check Org;
+:DiR;
+:KW;
+:ITC;
+:OCT;
+:BP;
+}
+:porospisuj w tygodniu;
+stop
+@enduml

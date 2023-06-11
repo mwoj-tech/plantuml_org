@@ -1,0 +1,63 @@
+@startsalt
+{
+
+{T
+**Katalog** | Rozmiar | **Rozsz.** | **Opis**
+katalog_projektu
+2023-03-30_ITC_Siedlce_8.p4d |2mb|.p4d|plik w którym zapisują się projkety pix4d
++ 1_initial|-|<DIR>|folder z danymi z przetwarzania wstępnego
+++Params |600 mb|<DIR>|folder gdzie się zapisuja wyrównane zdjecia w plikach tekstowych
++++**2023-03-30_ITC_Siedlce_8_calibrated_camera_parameters.txt** |-|-|wykorzystywane w pozycjonowaniu
++++**2023-03-30_ITC_Siedlce_8_calibrated_external_camera_parameters.txt**|-|-|wykorzystywane w pozycjonowaniu
++++2023-03-30_ITC_Siedlce_8_calibrated_external_camera_parameters_error.txt
++++2023-03-30_ITC_Siedlce_8_calibrated_external_camera_parameters_wgs84.txt
++++2023-03-30_ITC_Siedlce_8_calibrated_images_position.txt
++++**2023-03-30_ITC_Siedlce_8_calibrated_internal_camera_parameters.cam**|-|-|wykorzystywane w pozycjonowaniu
++++2023-03-30_ITC_Siedlce_8_camera.ssk
++++2023-03-30_ITC_Siedlce_8_estimated_gcps_position.txt
++++2023-03-30_ITC_Siedlce_8_measured_estimated_gcps_position.txt
++++2023-03-30_ITC_Siedlce_8_measured_gcps_position.txt
++++2023-03-30_ITC_Siedlce_8_offset.xyz
++++2023-03-30_ITC_Siedlce_8_photo.ssk
++++2023-03-30_ITC_Siedlce_8_pix4d_calibrated_internal_camera_parameters.cam
++++2023-03-30_ITC_Siedlce_8_pmatrix.txt
++++2023-03-30_ITC_Siedlce_8_result_correlations_internals.csv
++++2023-03-30_ITC_Siedlce_8_result_correlations_internals_externals.csv
++++2023-03-30_ITC_Siedlce_8_result_point_uncertainties.csv
++++2023-03-30_ITC_Siedlce_8_sun_angles.csv
++++2023-03-30_ITC_Siedlce_8_tp_bingo.txt
++++2023-03-30_ITC_Siedlce_8_tp_orima.txt
++++2023-03-30_ITC_Siedlce_8_tp_pix4d.txt
++++2023-03-30_ITC_Siedlce_8_wkt.prj
+++Report|-|<DIR>
++++2023-03-30_ITC_Siedlce_8_report.pdf|-|.pdf|Raport z przetwarzania
+
++2_densification |-|<DIR>
+++++point_cloud |-|<DIR>
++++++2023-03-30_ITC_Siedlce_8_group1_densified_point_cloud.las |1,14 gb|.las| Chmura puntków
+++++project_data |-|<DIR>
++3_dsm_ortho |-|<DIR>
+++1_dsm
++++2023-03-30_ITC_Siedlce_8_dsm.prj|-|.prj| Plik zawierajace metadane nt. układu współrzęnych
++++2023-03-30_ITC_Siedlce_8_dsm.tfw |-|.prj| Plik zawierajace metadane nt. współrzednych geostacjonarnych
++++2023-03-30_ITC_Siedlce_8_dsm.tif|1,20 gb|.tif| Rastrowy Numeryczny Model Pokrycia Terenu 
++++tiles |1,31 gb|<DIR>| w tym katalogu jest to samo co wyżej tylko podzielone na mniesze kawałki
+
+++2_mosaic
++++2023-03-30_ITC_Siedlce_8.prj|-|.prj| Plik zawierajace metadane nt. układu współrzęnych
++++2023-03-30_ITC_Siedlce_8.tfw |-|.prj| Plik zawierajace metadane nt. współrzednych geostacjonarnych
++++2023-03-30_ITC_Siedlce_8.tif|1,86 gb|.tif| Ortofotomapa 
++++tiles |1,94 gb|<DIR>| w tym katalogu jest to samo co wyżej tylko podzielone na mniesze kawałki
+
+++extras
++++dtm
+++++2023-03-30_ITC_Siedlce_8_dtm.prj|-|.prj| Plik zawierajace metadane nt. układu współrzęnych
+++++2023-03-30_ITC_Siedlce_8_dtm.tfw |-|.prj| Plik zawierajace metadane nt. współrzednych geostacjonarnych
+++++**2023-03-30_ITC_Siedlce_8_dtm.tif**|50 mb|.tif| Rastrowy Numeryczny Model (pozycjonowanie) 
++++tiles |52 mb|<DIR>| w tym katalogu jest to samo co wyżej tylko podzielone na mniesze kawałki
+
+++temp |-|<DIR>| Dane pośrednei z wstępnego przetarzanai (nie wykorzytywane)
+
+}
+}
+@endsalt

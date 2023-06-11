@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor eap
+actor IXL
+rectangle checkout {
+eap -- (checkout)
+(checkout) .> (payment) : include
+(help) .> (checkout) : extends
+(checkout) -- IXL
+}
+@enduml

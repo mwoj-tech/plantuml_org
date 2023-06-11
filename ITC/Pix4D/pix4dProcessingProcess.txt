@@ -1,0 +1,112 @@
+@startuml
+title Repo managment procedure (uploading data from drone)
+start
+partition pobieranie_zdj {
+:pobierz zdjecia z OD;
+}
+partition porządkowanie_zdj(???) {
+    floating note left: *Przy porządkowaniu jednak \n lepiej zostawiać foldery \n (do poprawy)
+    while (czy jest podfolder \n w foldrze misji  ) is (yes)
+            :umieść zdjęcia bezpośrednio 
+            w folderze misji;
+    endwhile (no)
+
+}
+
+partition eksport_eoz {
+    floating note left: *zastawnić się czy nie lepiej \n export osobno orto i ukos dl lepszej czytelności \n i wtedy osobno wczytać warstwy w qgis    
+    :Tworzymy pusty projekt
+    na potrzeby pobrania 
+    metadanych exif;
+    :Dodajemy wszystkie
+    foldery gdzie są zdjecia
+    , klikamy next i czekamy
+    aż się wgrają dane;
+    :zapisujemy jako plik .csv
+    Attribues: Name, coord. orientat.
+    Coords order: Lat, Lon, arrange_material
+    Delimiter: comma;
+}
+
+partition nadanie_nagłówka_csv {
+    :dodamjemy 1 wiersz:
+    "imageName, Lat, Lon, Alt, omega, phi, kappa, accXY, accZ";
+    :zapisujemy;
+}
+partition planowanie_w_qgis {
+    :Dodajemy plik textowy csv
+    ctrl + shift + t;
+    :patrzymy jakie misjie;
+    :;
+    :export do kml;
+}
+
+partition zakładanie_projektu {
+    :Uruchamiamy Pix4D i 
+    zakładamy nowy projekt;
+    :nadajemy nazwę w formacie
+    data + inwestor + zamówienie
+    np. 2023-04-14_WKD_Grodzisk.p4d;
+    :wybieramy miejsce zapisu;
+    :clickamy next i czekamy 
+    aż się załadują wyniki;
+}
+partition processing {
+
+
+partition initial_processing {
+    :ustawienia:
+    *bez podlądu ortofotomapy w raporcie;
+    :importuj obaszar mapy (kml);
+}
+partition analiza_raportu {
+    :ustawienia:
+    *bez podlądu ortofotomapy w raporcie;
+    if (niepewność =~0) then (yes)
+    :process all\ndiagrams;
+    else (no)
+    :process only
+    __sequence__ and __activity__ diagrams;
+    endif
+}
+partition cp&mesh_processing {
+    :process;
+}
+
+partition dsm&orto& {
+    :importuj obaszar mapy (kml);
+}
+partition analiza_raportu {
+    :ustawienia:
+    *bez podlądu ortofotomapy w raporcie;
+    if (niepewność =~0) then (yes)
+        :process all\ndiagrams;
+    else (no)
+        :set alternative calibration;
+        :image scale = 1/2;
+    endif
+}
+}
+
+partition sending_output_to_repo {
+:podłącz się klientem ftp do repo na serwerze;
+:stwórz paczkę wspólną do wysłania na serwer
+(żeby przeysłać tylko raz a nie każdy plik oddzielnie);
+while (czy wszystkie params i dtm zostały wysłane na serwer) is (no)
+        :kopiuj "calibrated_external_camera_parameters.txt";
+        :kopiuj "calibrated_camera_parameters.txt";
+        :kopiuj "calibrated_internal_camera_parameters.cam";
+        :dtm.tif;
+endwhile (no)
+}
+
+partition config.xml {
+:uzupełnić nagłóek;
+:uzupełnić dane z drone;
+floating note left: *pamiętać o zmiany zapisu na output    
+}
+
+:poinforumuj eksporta od przetwarzania ML;
+
+stop
+@enduml

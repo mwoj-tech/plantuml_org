@@ -1,0 +1,8 @@
+@startuml
+IXL -> eap: PML
+IXL -> eap: SA 
+IXL -> eap: Kc
+IXL -> eap: Ssz
+IXL --> eap: Uwy
+eap -> IXL: Dsz
+@enduml

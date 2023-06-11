@@ -1,0 +1,18 @@
+@startuml
+title format
+start
+:download;
+:af.wakeUp();
+:af.giveWater();
+:af.giveBreakfast(gofry, deserki);
+:af.makeBed();
+:af.putOnInternalClothes(upstairs);
+:af.putOnExternalClothes(downstairs);
+:fr.zawieźć(withAntek);
+:fr.odprowadzić(withAntek);
+:an.zawieźć();
+:an.odprowadzić();
+:m.goBack(home);
+:begin(start_work());
+stop
+@enduml

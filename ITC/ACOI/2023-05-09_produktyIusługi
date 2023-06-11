@@ -1,0 +1,301 @@
+@startmindmap
++ ITC \n Obloty Siedlce
+
+++ Wstęp
++++_ Zakres prezentacji
+++++_ o ACOI \n (kontekst)
++++++_ projekt badawczo rozwojowy
+++++++_ dofinansowany z PARP
++++++_ cele
+++++++_ cyfryzacja
++++++++_ infrastruktury kolejowej
++++++++_ z wykorzystaniem 
+++++++++_ UAV 
+++++++++_ ML
+++++++_ automatyzacja
++++++++_ pozyskiwania danych o infr.
++++++++_ przetwarzania
++++++++_ analizy
++++++++_ prezentacji
++++++_ efekty
+++++++_ **opracowana metodyka**
++++++++_ robienia nalotów 
++++++++_ przetwarzania fotogrametycznego
+++++++_ **moduł processingu danych z UAV**
++++++++_ z
+++++++++_ zdjęcia
+++++++++_ materiały fotogrametrczyne
++++++++_ python 3.10 
++++++++_ uruchamiane w środowisku wirtualnym
+
+++++++_ platforma webowa
++++++++_ interfejs użytkownika
++++++++_ prezentacja wyników
+++++++++_ tabelarczynie
+++++++++_ grafika wektorowa
++++++++++_ svg
+++++++++++_ xml
++++++++++_ rysowane automatycznie
++++++++++_ plany
+++++++++++_ schem
+++++++++++_ syt
+++++++++_ GIS
++++++++_ Cyfrowa Bocznica
+++++++++_ Kompletny system informatczny
+++++++++_ Do świadczenia usług kolei
+
++++++++_ z wykorz. platformy Microsoft .NET 6.0 oraz frameworku ASP.NET w jęz programowania C#
+
++++++_ Poligon doświadczalny
+++++++_ Węzeł kolejowy Siedlce
+++++++_ Akwizycja danych
+++++++_ Testowanie działania aplikacji
+
+
+++++_ Produkty i usługi
+
++++++_ Produkty
+++++++_ Zdjęcia \n surowe
++++++++_ Ortogonalne
++++++++_ Skośne
+++++++_ Pix4d
++++++++_ wyrównane zdjęcia
++++++++_ Chmura puntków
++++++++_ Ortofotomapa
+++++++++_ Surowa
+++++++++_ TurboCOG
++++++++_ DSM
++++++++_ DTM
++++++++_ Mesh 3D
+
+
+
+++++_ Usługi
++++++_ Inwentaryzacja
++++++_ Podląd w terenie
++++++_ Przestenne porządkowanie dokumentacji
++++++_ Inspekcja
++++++_ Weryfikacja na zgodność z przepisami
++++++_ Pomiary
+++++++_ Widoczność
+++++++_ Spadki
+++++++_ Obiętościowe
++++++_ Projektowanie
+
+
+
+
++++_ Produkty
+++++_ Zdjęcia \n surowe
++++++_ Ortogonalne
+++++++_ do 
++++++++_ plików rastrowych
++++++++_ pozycjonowania
+++++++_ parametry
++++++++_ wys. 50 m 
++++++++_ pitch 90 st.
++++++_ Skośne
+++++++_ do określana cech szczegółowych EIK
+++++++_ parametry
++++++++_ wys. 30 m 
++++++++_ pitch 55 st.
+++++_ Pix4d
++++++_ eoz
+++++++_ wyrównane metadane
++++++++_ wewnętrzne parametry kamery
++++++++_ zewnętrzne parametry kamery
+++++++_ pozycjonowanie
+++++++_ export .txt
++++++_ Chmura puntków
+++++++_ postaje przez matching
+++++++_ generowanie 
++++++++_ rastrów 
++++++++_ modeli 3D
+++++++_ pomiary 3D
+
++++++_ Rastry
+++++++_ Ortofotomapa
++++++++_ Surowa
+++++++++_ GSD 1cm/px
++++++++_ TurboCOG
+++++++++_ szybka
+++++++++_ web
+++++++_ DSM
++++++++_ wys. elementów
++++++++_ spadki
+++++++_ DTM
++++++++_ wys. npm
++++++++_ pozycjonowanie
++++++_ Mesh 3D
+++++++_ Model siatkowy
+++++++_ Trójkąty
+
+
++++ Usługi
+++++ Inwentaryzacja
++++++_ Definicja
++++++ Automatyczna
+++++++_ **Omówienie modułów inwentaryzacji**
++++++++_ Moduły
+++++++++_ M07 - Repozytorium as;dlfkjsl;adfj;lsadjflksajdfl;sakjdflkjlasd
+++++++++_ M14 - Trenowania modeli detekcji
++++++++++_ Nie bierze bezpośrednio udziału w inwentaryzacji
++++++++++_ Ma za zadanie wytrenować model rozpoznawania obrazu
++++++++++_ we: labele  EIL oznaczone przez człowieka
++++++++++_ wy: wytrenowany model
+
+++++++++_ Przetwarzania i analizy danych
++++++++++_ M5 – moduł detekcji obiektów na zdjęciach,
+++++++++++_ we: zdjęcia UAV
+++++++++++_ proces: detakcja: wytrenowany model + silnik detekcji
+++++++++++_ wy: rozpoznane na zdj obiekty w .txt
+
++++++++++_ M16 – moduł określania cech szczegółowych,
+++++++++++_ we: bbox wygenerowane przez silnik detekcji
+++++++++++_ proces: analiza i ekstrakcja obiektów elementarnych i cech szczegółowych
+++++++++++_ proces:
++++++++++++_ 3 sposoby:
++++++++++++_ nad podst. bboxów cech szczeg.
++++++++++++_ nad podst. nazwy klasy obiektu.
++++++++++++_ nad podst. specyficznych klas labeli
+++++++++++++_ zagnieżdzona dodatkowa logika
+++++++++++++_ gdzie wynikiem jest np liczba 
+++++++++++++_ np. zliczacznie komór sygnalizatora
+++++++++++++_ na podstawie proporcji latarni
+
+
+++++++++++_ wy: zapis do db EIK i ich cech
+++++++++++_ wy: przekazanie EIK do modułu pozycjonowania
+
++++++++++_ M12 – moduł agregacji opisu elementów infrastruktury kolejowej.
+++++++++++_ .
++++++++++++_ kompilacja cech szczegółowych EIK
++++++++++++_ korelacja z wypozycjonowany EIK
+++++++++++_ we: dane z pozycjonowania + baza danych
+++++++++++_ proces: korelacja
+++++++++++_ wy: .geojson
+++++++++++_ format 
++++++++++++_ do 
+++++++++++++_ reprezentowania obiektów geograficznych 
+++++++++++++_ wraz z ich nieprzestrzennymi atrybutami
+
+
+
+++++++++_ M06 - Moduł pozycjonowania obiektów infrastruktury kolejowej
++++++++++_ we:
+++++++++++_ wykryte EIK
+++++++++++_ dane fotogrametryczne
++++++++++_ Proces
+++++++++++_ Pozycjonowanie
++++++++++++_ Metodą rzutu środkowego
+++++++++++_ Klasteryzacja
++++++++++_ .wy
+++++++++++_ .geojson
++++++++++++_ bez atrybutów
+
+
+++++++_ skuteczność
++++++++_ 1/4 automatycznie
+++++++_ Podgląd zdjęć usrk
++++++ Ręczna 
+
++++++_ Wynik inwentaryzacji
+++++++_ .geojson
++++++++_ coords
+++++++++_ x
+++++++++_ y
+++++++++_ z
++++++++_ klasa
+++++++++_ sygnalizator
+++++++++_ napęd
+++++++++_ shp
+++++++++_ lo
+++++++++_ wskaźnik
++++++++_ detekcja
+++++++++_ na ilu zdjęciach
+++++++++_ na jakich zdjęciach
++++++++_ bb id
++++++++_ cechy
++++++ Zbiór zasobów TODO
+++++++_ Lokalizacja elementów infrastruktury kolejowej
+
+++++ Podląd w terenie
++++++_ zdjec skośnych 
+++++++_ GIS
+++++++_ Tradycjnie
+++++ Podgląd dokumentacji
++++++_ Przestrzennie/Geograficznie
+++++++_ Elementy sieci kolejowej
++++++++_ Nie są bytami abstrakcyjnymi
++++++++_ Są osadzone w terenie
++++++++_ Mają ograniczony Zakres
++++++++_ Mają
+++++++++_ Plany 
+++++++++_ sytuacyjny
+++++++++_ schematyczny
+++++++++_ kablowy
+++++++++_ izolacji...
+
+++++++_ zalety
++++++++_ user friendly
++++++_ W strukutrze folderów
+++++++_ wady
+
+
+
+++++ Inspekcja
++++++_ Na mapie GIS
++++++_ Na zdj skośnych
++++++_ Ekspercko
+++++++_ na razie polegamy bardziej na wiedzy specjalistycznej
+++++++_ automatyzacja
++++++++_ wymaga
+++++++++_ budowy repozytorium ML usterek
+++++++++_ bardzo trudne
++++++ Dodawanie uwag
++++++ Export
+++++++_ Excel
+++++++_ csv
+++++ Weryfikacja 
++++++ Akty prawne
+++++++_ UoTK
+++++++_ Rz 151 - Usytuowanie budowli kolejowych
+++++++_ Rz 360 - O sygnalizacji 
+++++++_ Rz 1744 - O przejazdach kolejowych
++++++ Wizja lokalna
+++++++ sprawdzenia
++++++++_ mające wpływ na bezpieczeństwo
++++++++_ odległości
+++++++++_ sygnalizator - miejsce niebezpieczne
+++++++++_ sygnalizator - czujnik
+++++++++_ czujnik - miejsce niebezpieczne
+++++++++_ W4 - semafor, W4 - ukres
+++++++++_ tarcza manewrowa - ukres
+++++++++_ czujnik - ukres
+++++++++_ wykolejnica - ukres
+++++++++_ semafor - SHP
+++++++++_ [...]
+
+++++++_ Dronem
++++++++_ Nie inwazyjna
++++++++_ Nie trzeba robić próbkowo
++++++++_ Można powtórzyć pomiar po dowolnym czasie
+
+
+++++_ Pomiary
++++++_ Widoczność
+++++++_ **Trójkąt widoczności**
++++++++_ Raport
++++++++_ DSM
++++++_ Spadki
+++++++_ Podłużne (niweleta)
++++++_ Objętościowe
+++++ Projektowanie
++++++ Plan sytuacyjny
+++++++ dwg
+++++++ gis
++++++ Plan schematyczny
+
++++ Podsumowanie
+
+@endmindmap

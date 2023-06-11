@@ -1,0 +1,83 @@
+@startuml
+title EndDay
+start
+:Q20.alarm(21:30);
+
+:m.getWarmShower(10min);
+
+partition Clothes {
+    :pijama.putOn();
+    :szlafrok.prepare();
+    :kapcie.prepare();
+    :ubraniaDoPracy.prepare();
+    :ubrania_AF.askIfReady(internal, external);
+}
+partition Kitchen {
+:[ ] melissa.prepare();
+:[ ] water.drink();
+:[ ] coffee.prepare(?);
+:[ ] C&C_drink.prepare();
+:[ ] suplements.swallow(vit B6, D, magn (...));
+}
+
+partition Devices {
+    :[ ] Q20.setAlarm(5:00, wim);
+    :[ ] Q10.charge();
+    :[ ] Q20.charge();
+    :[ ] T420.charge(sofa);
+}
+partition FoodPrep {
+    :[ ] food.prepare(maylen, me);
+}
+
+partition Cleaning_max_15_min {
+
+while ([ ] dishWasherCubiertos == clean) is (true)
+        :[ ] dishWasher.empty();
+endwhile (false)
+
+while (cubierto == dirty) is (true)
+        :cubierto.putIntoDishWasher();
+endwhile (false)
+   
+if (dishWasherCubiertos == clean) equals (true) then   
+    if (cubierto == dirty) equals (true) then
+        repeat
+           :cubierto.putIntoDishWasher();
+        repeat while (cubierto == dirty) is (true)
+        ->false;
+    else
+        ->false;
+    endif
+else 
+        ->false;
+        :dishWasher.empty();
+endif
+
+    if (trash == anywhere) equals (true) then
+        :trash.putToBin();
+    else    
+        ->false;            
+    endif
+
+    if (toys == not_on_place) equals (true) then
+        :toys.putOnPlace();
+    else    
+        ->false;            
+    endif
+    
+    while (toys = notOnPlace) is (true)
+        :toys.putOnPlace(broom);
+    endwhile (false)
+
+    while (floor = dirty) is (true)
+        :floor.broom();
+        endwhile (false)
+
+}
+:LEU17.fastUpdate();
+:book.read();
+:m.fallAsleep();
+
+stop
+@enduml

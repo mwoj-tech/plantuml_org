@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" width="172px" height="210px" viewBox="0, 0, 172, 210" preserveAspectRatio="none" contentStyleType="text/css" zoomAndPan="magnify" style="background:#FFF;">
+  <defs />
+  <g>
+    <text x="6" y="18.457" textLength="43" lengthAdjust="spacing" font-family="sans-serif" font-size="12" font-weight="bold" style="fill:black;">Moduły:</text>
+    <text x="6" y="35.5508" textLength="43" lengthAdjust="spacing" font-family="sans-serif" font-size="12" font-weight="bold" style="fill:black;">Katalog</text>
+    <text x="36" y="50.6445" textLength="43" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:black;">order_a</text>
+    <text x="46" y="65.7383" textLength="39" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:black;">area_a</text>
+    <text x="56" y="80.832" textLength="64" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:black;">1_uav_data</text>
+    <text x="66" y="95.9258" textLength="55" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:black;">2_oblique</text>
+    <text x="76" y="111.0195" textLength="59" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:blue;">mission_a</text>
+    <text x="86" y="126.1133" textLength="79" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:blue;">1_flight_vector</text>
+    <text x="86" y="141.207" textLength="79" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:blue;">2_raw_photos</text>
+    <text x="66" y="156.3008" textLength="42" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:black;">2_ortho</text>
+    <text x="76" y="171.3945" textLength="59" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:blue;">mission_a</text>
+    <text x="86" y="186.4883" textLength="79" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:blue;">1_flight_vector</text>
+    <text x="86" y="201.582" textLength="79" lengthAdjust="spacing" font-family="sans-serif" font-size="12" style="fill:blue;">2_raw_photos</text>
+    <rect x="-1" y="29.6406" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <rect x="29" y="44.7344" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <line x1="0" y1="32.6406" x2="0" y2="45.7344" stroke-width="1" style="stroke:#888888;" />
+    <line x1="0" y1="45.7344" x2="28" y2="45.7344" stroke-width="1" style="stroke:#888888;" />
+    <rect x="39" y="59.8281" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <line x1="30" y1="47.7344" x2="30" y2="60.8281" stroke-width="1" style="stroke:#888888;" />
+    <line x1="30" y1="60.8281" x2="38" y2="60.8281" stroke-width="1" style="stroke:#888888;" />
+    <rect x="49" y="74.9219" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <line x1="40" y1="62.8281" x2="40" y2="75.9219" stroke-width="1" style="stroke:#888888;" />
+    <line x1="40" y1="75.9219" x2="48" y2="75.9219" stroke-width="1" style="stroke:#888888;" />
+    <rect x="59" y="90.0156" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <line x1="50" y1="77.9219" x2="50" y2="91.0156" stroke-width="1" style="stroke:#888888;" />
+    <line x1="50" y1="91.0156" x2="58" y2="91.0156" stroke-width="1" style="stroke:#888888;" />
+    <rect x="69" y="105.1094" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <line x1="60" y1="93.0156" x2="60" y2="106.1094" stroke-width="1" style="stroke:#888888;" />
+    <line x1="60" y1="106.1094" x2="68" y2="106.1094" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="108.1094" x2="70" y2="121.2031" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="121.2031" x2="78" y2="121.2031" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="108.1094" x2="70" y2="136.2969" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="136.2969" x2="78" y2="136.2969" stroke-width="1" style="stroke:#888888;" />
+    <rect x="59" y="150.3906" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <line x1="50" y1="77.9219" x2="50" y2="151.3906" stroke-width="1" style="stroke:#888888;" />
+    <line x1="50" y1="151.3906" x2="58" y2="151.3906" stroke-width="1" style="stroke:#888888;" />
+    <rect x="69" y="165.4844" width="2" height="2" stroke-width="1" style="fill:none;stroke:#888888;" />
+    <line x1="60" y1="153.3906" x2="60" y2="166.4844" stroke-width="1" style="stroke:#888888;" />
+    <line x1="60" y1="166.4844" x2="68" y2="166.4844" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="168.4844" x2="70" y2="181.5781" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="181.5781" x2="78" y2="181.5781" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="168.4844" x2="70" y2="196.6719" stroke-width="1" style="stroke:#888888;" />
+    <line x1="70" y1="196.6719" x2="78" y2="196.6719" stroke-width="1" style="stroke:#888888;" />
+  </g>
+</svg>
