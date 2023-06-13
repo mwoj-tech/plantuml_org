@@ -1,0 +1,4 @@
+git commands:
+  git log --oneline --graph --all --decorate
+  git checkout 144d6ac
+  
