@@ -1,7 +1,7 @@
 @startuml
 title startWork 
 start
-:[  ] room.clean();
+:[ x ] room.clean();
 :[  ] desktop.clean();
 :[  ] windowDesktop.declutter();
     if (Kids at home) then (yes)
