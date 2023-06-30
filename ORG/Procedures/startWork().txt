@@ -14,7 +14,7 @@ note right: onenote \n gitlab
 
 
     endif
-:[ ] pomodoroApp.run(25min<&timer>) ; 
+:[x] pomodoroApp.run(25min<&timer>) ; 
 partition ORG {
 :[ ] LEU17.putOnBamboo(weekView);
 :[ ] onetActivities.write();

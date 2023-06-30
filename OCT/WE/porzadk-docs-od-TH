@@ -1,0 +1,23 @@
+@startuml
+|Klient|
+start
+:wstawienie dokumentacji \n na SP wymiany danych;
+|#AntiqueWhite|OCT|
+:Przekopiowanie dokument. \n na SP roboczy do "dokumentacj \n przesłanej";
+partition Porządkowanie-dokumentacji {
+:usuń podfolery;
+:zostwa ID w nazwie foldera;
+:usuń wersje edytowalne;
+:przekopiuj do dokumentacji \n ocenianej;
+}
+:aktualizuj checklistę gitlab;
+:przekopiuj braki do \n "WS Braki całość";
+:wyślij WS do klienta";
+|Klient|
+:Odbierz WS;
+:Skompletuj braki;
+:Wstaw na SP wspólnego;
+:Wstaw linki do braków \n w pliku WS;
+:Wyślij WS do OCT;
+stop
+@enduml
