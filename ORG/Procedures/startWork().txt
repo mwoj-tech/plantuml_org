@@ -1,23 +1,28 @@
 @startuml
 title startWork 
 start
-:[ x ] room.clean();
-:[  ] desktop.clean();
-:[  ] windowDesktop.declutter();
+:[x] git.run();
+:[x] room.clean();
+:[x] desktop.clean();
+:[x] water.prepare();
+:[x] windowsDesktops.arrange(declutter());
+note right: onenote \n gitlab
     if (Kids at home) then (yes)
             :[  ] put head phones;
-            :[  ] music.run(hbr1) <&musical-note>;
+            :[ ] music.run(hbr1) <&musical-note>;
         else (no)
 
 
     endif
-:[  ] pomodoroApp.run(25min<&timer>) ; 
+:[ ] pomodoroApp.run(25min<&timer>) ; 
 partition ORG {
-:[  ] LEU17.putOnBamboo(weekView);
-:[  ] onetActivities.write();
-:[  ] LEU17.dailyPlanning();
-:[  ] m.planNext25minSession();
+:[ ] LEU17.putOnBamboo(weekView);
+:[ ] onetActivities.write();
+:[ ] LEU17.dailyPlanning();
+:[ ] stickApp.run();
+:[a] m.planNext25minSession();
 }
+: unmark checkbox;
 stop
 
 @enduml
