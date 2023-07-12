@@ -1,0 +1,10 @@
+@startjson
+{
+"type": "FeatureCollection",
+"name": "elem_sieciowe_geojson_template",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2180" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "skrot": "skrót", "nazwa": "nazwa", "pochyl": 4, "vmax_poc": 100, "vmax_ezt": 100, "vmax_t": 60, "promien": 300 }, "geometry": { "type": "MultiLineString", "coordinates": [ [ [ 722772.294649225776084, 483022.137617238797247 ], [ 722785.889127025380731, 483012.523996124044061 ] ] ] } }
+]
+}
+@endjson
