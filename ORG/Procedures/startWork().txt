@@ -1,7 +1,7 @@
 @startuml
 title startWork 
 start
-:[x] git.run();
+:[x] git.run(git.status());
 :[x] room.clean();
 :[x] desktop.clean();
 :[x] water.prepare();
@@ -16,9 +16,10 @@ note right: onenote \n gitlab
     endif
 :[x] pomodoroApp.run(25min<&timer>) ; 
 partition ORG {
-:[ ] LEU17.putOnBamboo(weekView);
-:[ ] onetActivities.write();
-:[ ] LEU17.dailyPlanning();
+:[x] LEU17.putOnBamboo(weekView);
+:[x] onetActivities.write();
+:[x] LEU17.dailyPlanning();
+:[ ] gitlab.arrange();
 :[ ] stickApp.run();
 :[a] m.planNext25minSession();
 }
