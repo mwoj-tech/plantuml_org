@@ -1,13 +1,21 @@
 @startmindmap
 * Relacje sieciowe
-**_ Pozycje
+**_ początek obiektu
+***_ posterunek
+****_ wjazd sbl
+*****_ oś toru na wys. SHP przed \n ostatn. sem. odst. (z W18)
+****_ wjazd pbl
+*****_ oś toru na wys. 1ego W11 przed To
+***_ szlak
+****_ czuj. blokadowe 100 m za sem. wj
+**_ punkt geometryczny
 ***_ rozjazd
-****_ styk przediglicowy?
-****_ punkt geometryczny?
-***_ łuk
-****_ pierwszy za rozjazdem
-***_ duży
-***_ krzywa przejściowa
-***_ foobar
-** another first level node
+***_ skrzyżowanie torów
+**_ łuk
+***_ początek i koniec
+***_ łukowe pośrednie
+**_ krzywa przejściowa
+***_ początek i koniec
+**_ kozioł oporowy
+
 @endmindmap
