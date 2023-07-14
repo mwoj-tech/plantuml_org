@@ -1,18 +1,11 @@
 @startuml
 title format
 start
-:download;
-:af.wakeUp();
-:af.giveWater();
-:af.giveBreakfast(gofry, deserki);
-:af.makeBed();
-:af.putOnInternalClothes(upstairs);
-:af.putOnExternalClothes(downstairs);
-:fr.zawieźć(withAntek);
-:fr.odprowadzić(withAntek);
-:an.zawieźć();
-:an.odprowadzić();
-:m.goBack(home);
-:begin(start_work());
+:[ ] od.logIn();
+:[ ] od.sync();
+:[ ] ahk.install();
+:[ ] clk.run();
+:[ ] keepass.install();
+:[ ] office.install();
 stop
 @enduml
