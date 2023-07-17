@@ -1,11 +1,11 @@
 @startuml
 title startWork 
 start
-:[ ] git.run(git.status());
-:[ ] room.clean();
-:[ ] desktop.clean();
-:[ ] water.prepare();
-:[ ] glasses.putOn();
+:[ x] git.run(git.status());
+:[ x] room.clean();
+:[ x] desktop.clean();
+:[ x] water.prepare();
+:[ x] glasses.putOn();
 :[ ] windowsDesktops.arrange(declutter());
 note right: onenote \n gitlab
     if (Kids at home) then (yes)
