@@ -1,0 +1,6 @@
+#convert epsg
+gdalwarp -of GTiff -s_srs epsg:2180 -t_srs epsg:4326 -co "tfw=yes" 'input.tif' 'output.tif'
+
+
+#convert 2 cog
+gdalwarp -of COG "input.tif" "output.tif"
