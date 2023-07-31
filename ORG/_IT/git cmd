@@ -1,0 +1,43 @@
+
+git log --oneline --graph --all --decorate
+
+git checkout 144d6ac
+
+git config --list (sprawdzenie)
+
+git config --global user.name "mwoj"
+
+git config --global user.email "mail" 
+
+git init
+
+git status
+	(czerwone - nie śledzone)
+	
+git add [filename][folderpath]    - dodanie do stage area
+
+git add -A
+
+git status - powinno być zielone
+	
+git commit -m "pierwszy commit"   (m-message)
+
+git remote add origin url (bez git clone)
+
+git remote -v (sprawdza połączenie)
+
+git remote remove origin
+
+git remote add origin ssh:…
+
+git pull - sprawdzanie z master 
+
+git branch 
+
+git stash
+
+git branch - lista branchów
+
+git branch xxx - tworzy brancha
+
+git clone url .
