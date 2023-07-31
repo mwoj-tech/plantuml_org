@@ -1,0 +1,7 @@
+ffmpeg -version
+
+#multiple convert
+for %i in (*.mp4) do ffmpeg -i "%i" "%~ni.mp3"
+
+#subs
+for i in *.vtt ; do ffmpeg -i "$i" "$i.srt" 
