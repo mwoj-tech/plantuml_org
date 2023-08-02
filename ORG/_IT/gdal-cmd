@@ -2,5 +2,10 @@
 gdalwarp -of GTiff -s_srs epsg:2180 -t_srs epsg:4326 -co "tfw=yes" 'input.tif' 'output.tif'
 
 
+
+
+
 #convert 2 cog
 gdalwarp -of COG "input.tif" "output.tif"
+
+gdalwarp -of COG "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif" "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif"
