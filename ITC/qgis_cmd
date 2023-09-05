@@ -1,0 +1,8 @@
+#Azymut linii
+
+degrees(azimuth(start_point($geometry), end_point($geometry)))
+
+#Pobierz wartość z najbliższej warstwy wekotowerj
+
+overlay_nearest('elem_sieciowe_template',"azim_expr")[0]
+
