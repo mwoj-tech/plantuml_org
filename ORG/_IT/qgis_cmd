@@ -6,3 +6,10 @@ degrees(azimuth(start_point($geometry), end_point($geometry)))
 
 overlay_nearest('elem_sieciowe_template',"azim_expr")[0]
 
+
+#Azymut zależny od kierunku 1 lub 2.
+
+CASE 
+  WHEN kier = 2 THEN azim_dziedz + 180
+  ELSE azim_dziedz
+END

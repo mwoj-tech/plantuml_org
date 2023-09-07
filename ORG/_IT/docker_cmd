@@ -1,0 +1,8 @@
+# show all containters and get id
+
+sudo docker containter ls
+
+# copy from linux > docker
+
+sudu docker cp . d3a:/home/orto/orto_siedlce
+

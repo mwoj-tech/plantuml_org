@@ -1,7 +1,8 @@
+#activate gdal
+conda activate gdal_1 
+
 #convert epsg
 gdalwarp -of GTiff -s_srs epsg:2180 -t_srs epsg:4326 -co "tfw=yes" 'input.tif' 'output.tif'
-
-
 
 
 
@@ -9,3 +10,11 @@ gdalwarp -of GTiff -s_srs epsg:2180 -t_srs epsg:4326 -co "tfw=yes" 'input.tif' '
 gdalwarp -of COG "input.tif" "output.tif"
 
 gdalwarp -of COG "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif" "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif"
+
+#Upload to postGIS
+
+ogr2ogr -f PostgreSQL PG:"host={} user={} port={} dbname={} password={}" test.geojson -nln ogr_test 
+
+ 
+ogr2ogr -f PostgreSQL PG:"host=83.9.144.248 user=postgres port=5432 dbname=LKDB password=***************" "C:\Users\Administrator\Desktop\2023-07-20_description_aggregation_output_v3_inw_reczna.geojson" -nln ogr_test 
+
