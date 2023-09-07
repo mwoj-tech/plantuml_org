@@ -4,5 +4,8 @@ sudo docker containter ls
 
 # copy from linux > docker
 
-sudu docker cp . d3a:/home/orto/orto_siedlce
+
+docker cp container_id:/foo.txt foo.txt
+
+sudo docker cp . d3a:/home/orto/orto_siedlce
 
