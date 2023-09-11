@@ -2,8 +2,11 @@
 
 sudo docker containter ls
 
-# copy from linux > docker
+# get into docker
 
+sudo docker exec -t -i d3a /bin/bash
+
+# copy from linux > docker
 
 docker cp container_id:/foo.txt foo.txt
 

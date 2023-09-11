@@ -13,3 +13,12 @@ CASE
   WHEN kier = 2 THEN azim_dziedz + 180
   ELSE azim_dziedz
 END
+
+
+# Poprzedni rozbudowany 2023-09-11
+
+CASE 
+  WHEN direction = 2 AND azimuth_inherit < 180 THEN azimuth_inherit + 180
+  WHEN direction = 2 AND azimuth_inherit > 180 THEN azimuth_inherit - 180
+  ELSE azimuth_inherit
+END
