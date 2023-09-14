@@ -11,4 +11,8 @@ sudo docker exec -t -i d3a /bin/bash
 docker cp container_id:/foo.txt foo.txt
 
 sudo docker cp . d3a:/home/orto/orto_siedlce
+sudo docker cp . d3a:/home/geoserveruser/svg
+sudo docker cp . d3a:/opt/geoserver/data_dir/workspaces/siedlce-prod/svg
+sudo docker cp . d3a:/opt/geoserver/data_dir/workspaces/siedlce-prod/styles/2023-09-12_svg_obr_pion
+sudo docker cp 2023-09-13_wys_5kom_raw_svg.svg d3a:/opt/geoserver/data_dir/workspaces/siedlce-prod/styles/svg
 

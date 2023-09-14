@@ -1,0 +1,3 @@
+#copy all file from current folder to DEST folder
+ 
+ cp * /opt/geoserver/data_dir/workspaces/siedlce-prod/styles/svg
