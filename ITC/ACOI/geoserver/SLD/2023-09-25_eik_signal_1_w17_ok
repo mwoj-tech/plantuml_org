@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogc="http://www.opengis.net/ogc" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:se="http://www.opengis.net/se" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
+  <NamedLayer>
+    <se:Name>2023-07-20_description_aggregation_output_v3_inw_reczna — 2023-06-19_description_aggregation_output_v3</se:Name>
+    <UserStyle>
+      <se:Name>2023-07-20_description_aggregation_output_v3_inw_reczna — 2023-06-19_description_aggregation_output_v3</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'wskaznik'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>features</ogc:PropertyName>
+              <ogc:Literal>{ "rodzaj_wskaznika": "w17" }</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-25_wskaznik_w17_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>6</se:Size>
+              <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+		<se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'wskaznik'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>features</ogc:PropertyName>
+              <ogc:Literal>{ "rodzaj_wskaznika": "w5" }</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-21_wskaznik_w5_mgu_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>10</se:Size>
+              <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+		<se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'wskaznik'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>features</ogc:PropertyName>
+              <ogc:Literal>{ "rodzaj_wskaznika": "w4" }</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-21_wskaznik_w4_mgu_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>10</se:Size>
+              <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+		<se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'wskaznik'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>features</ogc:PropertyName>
+              <ogc:Literal>{ "rodzaj_wskaznika": "w11a" }</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-21_wskaznik_w11a_mgu_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>10</se:Size>
+              <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+		<se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'wskaznik'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>features</ogc:PropertyName>
+              <ogc:Literal>{ "rodzaj_wskaznika": "w1" }</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-21_wskaznik_w1_mgu_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>10</se:Size>
+              <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+				
+			
+        <se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'sygnalizator'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>class_id</ogc:PropertyName>
+              <ogc:Literal>sygnalizator</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-21_wys_1kom_mgu_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>20</se:Size>
+              <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>	
+				
+        <se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'rezonator_shp'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>class_id</ogc:PropertyName>
+              <ogc:Literal>rezonator_shp</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-21_shp_mgu_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>8</se:Size>
+              <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'naped'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>class_id</ogc:PropertyName>
+              <ogc:Literal>naped</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/2023-09-21_naped_mgu_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>8</se:Size>
+			  <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name></se:Name>
+          <se:Description>
+            <se:Title>class_id is 'czujnik'</se:Title>
+          </se:Description>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>class_id</ogc:PropertyName>
+              <ogc:Literal>czujnik</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PointSymbolizer uom="http://www.opengeospatial.org/se/units/metre">
+            <se:Graphic>
+              <!--Parametric SVG-->
+              <se:ExternalGraphic>
+                <se:OnlineResource xlink:type="simple" xlink:href="./2023-09-13_biblioteka_svg_mgu/czujnik_stroke.svg"/>
+                <se:Format>image/svg+xml</se:Format>
+              </se:ExternalGraphic>
+              <!--Well known marker fallback-->
+              
+              <se:Size>15</se:Size>
+			  <se:Rotation>
+               <ogc:PropertyName>target_azimuth</ogc:PropertyName>        
+			  </se:Rotation>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+        <se:Rule>
+           <se:TextSymbolizer>
+            <se:Label>
+              <ogc:PropertyName>name</ogc:PropertyName>
+            </se:Label>
+            <se:Font>
+              <se:SvgParameter name="font-family">Arial</se:SvgParameter>
+              <se:SvgParameter name="font-size">13</se:SvgParameter>
+            </se:Font>
+            <se:LabelPlacement>
+              <se:PointPlacement>
+                <se:AnchorPoint>
+                  <se:AnchorPointX>0</se:AnchorPointX>
+                  <se:AnchorPointY>2</se:AnchorPointY>
+                </se:AnchorPoint>
+              </se:PointPlacement>
+            </se:LabelPlacement>
+            <se:Halo>
+              <se:Radius>2</se:Radius>
+              <se:Fill>
+                <se:SvgParameter name="fill">#fafafa</se:SvgParameter>
+              </se:Fill>
+            </se:Halo>
+            <se:Fill>
+              <se:SvgParameter name="fill">#323232</se:SvgParameter>
+            </se:Fill>
+            <se:VendorOption name="maxDisplacement">1</se:VendorOption>
+          </se:TextSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

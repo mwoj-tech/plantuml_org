@@ -11,6 +11,15 @@ gdalwarp -of COG "input.tif" "output.tif"
 
 gdalwarp -of COG "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif" "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif"
 
+#make COG lighter
+
+    gdal_translate -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 input.tif output_cog.tif
+
+    gdal_translate -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326_COG.tif" "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326_COG_compressed.tif"
+
+    gdal_translate -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-30_ITC_Siedlce_8_transparent_mosaic_group1_gdal_epsg_4326_cog.tif" "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-30_ITC_Siedlce_8_transparent_mosaic_group1_gdal_epsg_4326_cog_compressed.tif"
+
+
 #Upload to postGIS
 
 ogr2ogr -f PostgreSQL PG:"host={} user={} port={} dbname={} password={}" test.geojson -nln ogr_test 

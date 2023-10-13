@@ -22,3 +22,8 @@ CASE
   WHEN direction = 2 AND azimuth_inherit > 180 THEN azimuth_inherit - 180
   ELSE azimuth_inherit
 END
+
+
+#concat()
+
+concat('https://localhost:7240/FunctionalInfrastructureElements/Details/', "autoid")

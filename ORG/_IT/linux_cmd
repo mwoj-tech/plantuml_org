@@ -1,3 +1,11 @@
 #copy all file from current folder to DEST folder
  
  cp * /opt/geoserver/data_dir/workspaces/siedlce-prod/styles/svg
+
+
+find / -type d -name "header.ftl"
+find / -type d -name "startup.sh"
+
+header
+
+cp * /home/backup/lib
