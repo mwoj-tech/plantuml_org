@@ -8,6 +8,7 @@ sudo docker exec -t -i d3a /bin/bash
 sudo docker exec -t -i 872 /bin/bash
 
 sudo docker exec -t -i 105 /bin/bash
+sudo docker exec -t -i 2d2 /bin/bash
 # copy from linux > docker
 
 docker cp container_id:/foo.txt foo.txt

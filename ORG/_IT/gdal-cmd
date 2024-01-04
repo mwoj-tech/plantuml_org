@@ -9,7 +9,13 @@ gdalwarp -of GTiff -s_srs epsg:2180 -t_srs epsg:4326 -co "tfw=yes" 'input.tif' '
 #convert 2 cog
 gdalwarp -of COG "input.tif" "output.tif"
 
-gdalwarp -of COG "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif" "C:\FTP\geoserver\test\2023-07-31_Siedlce_gdal_cog_epsg4326\2023-03-31_ITC_Siedlce_6_transparent_mosaic_group1_epsg4326.tif"
+gdalwarp -of COG "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1.tif" "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1_cog_2023-11-16.tif"
+
+"C:\Users\Administrator\Desktop\ffmpeg-5.1.2-full_build\bin\ffmpeg.exe" -i "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1.tif" "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1_standard.jpg"
+
+convert "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1.tif" -quality 90% -resize 50% "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1_standard.jpg"
+
+"C:\Users\Administrator\Desktop\ffmpeg-5.1.2-full_build\bin\ffmpeg.exe" convert "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1.tif" "C:\FTP\pix4d\2023-11-03_Ch-cgp\2023-11-01_orto_all_cgp_transparent_mosaic_group1_standard.tif"
 
 #Upload to postGIS
 
