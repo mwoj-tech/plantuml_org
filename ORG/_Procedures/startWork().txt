@@ -1,12 +1,12 @@
 @startuml
 title startWork 
 start
-:[ ] git.run(git.status());
-:[ ] room.clean();
-:[ ] desktop.clean();
-:[ ] water.prepare();
-:[ ] glasses.putOn();
-:[ ] windowsDesktops.arrange(declutter());
+:[X] git.run(git.status());
+:[x] room.clean();
+:[x] desktop.clean();
+:[x] water.prepare();
+:[x] glasses.putOn();
+:[x] windowsDesktops.arrange(declutter());
 note right: onenote \n gitlab
     if (Kids at home) then (yes)
             :[  ] put head phones;
@@ -15,11 +15,11 @@ note right: onenote \n gitlab
 
 
     endif
-:[ ] pomodoroApp.run(25min<&timer>) ; 
+:[x] pomodoroApp.run(25min<&timer>) ; 
 partition ORG {
-:[ ] LEU17.putOnBamboo(weekView);
+:[x] LEU17.putOnBamboo(weekView);
 :[ ] onetActivities.write();
-:[ ] LEU17.dailyPlanning();
+:[ ] LEU17.dailyPlanning();>>>
 :[ ] gitlab.arrange();
 :[ ] stickApp.run();
 :[a] m.planNext25minSession();

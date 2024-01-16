@@ -6,6 +6,9 @@ degrees(azimuth(start_point($geometry), end_point($geometry)))
 
 overlay_nearest('elem_sieciowe_template',"azim_expr")[0]
 
+overlay_nearest('chain_2024-01-12_LK2_przebieg',"km")[0]
+
+round(overlay_nearest('chain_2024-01-12_LK2_przebieg', "km")[0]) / 1000
 
 #Azymut zależny od kierunku 1 lub 2.
 
