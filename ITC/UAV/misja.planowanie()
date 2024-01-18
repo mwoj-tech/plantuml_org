@@ -1,0 +1,14 @@
+@startuml
+title Planowanie misji
+start
+:uruchom qgis;
+:stwórz warstwy:
+- semafory skrajne
+- granice lotów
+- starty
+- wektory lotów
+- fotopunkty
+;
+
+stop
+@enduml
