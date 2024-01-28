@@ -45,6 +45,18 @@ package eap {
     }
 
 
+     package Obwowdy_odzial_pociag {
+    
+       usecase "Kc - kontrola światła czerwonego semafora wjazdowego" as kc3
+
+       usecase "Kpz - kontorla światł. pomrań. i ziel. semafora wjazdowego" as kpz3
+
+
+        
+
+    }
+
+
 
 
 
@@ -62,5 +74,7 @@ ixl --> kc2
 ixl --> ozl2
 ixl --> sx : 1..*
 ixl --> kn : 1..*
+ixl --> kc3
+ixl --> kpz3
 
 @enduml
