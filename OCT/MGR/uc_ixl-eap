@@ -1,0 +1,66 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor ixl as ixl
+package eap {
+
+    package obw-przekazn-Ps_lub_Wbl_lub_ {
+
+        package wariant-pml{
+    
+        usecase "Pml lub sygnalowe wyjazdów - Pomocniczy kierunkowo liniowy" as pml
+
+        }
+
+        package wariant-SX_Kn? {
+        usecase "SX - przekaźniki sygnałowe wyjazdów" as sx
+
+        usecase "Kn - kontrola położenia rozjazdu" as kn
+
+    }
+        
+
+    }
+
+    package obw-przek-pozw {
+        usecase "Kc - kontrola światła czerwonego semafora wjazdowego" as kc
+        usecase "Kpz - kontorla światł. pomrań. i ziel. semafora wjazdowego" as kpz
+
+        usecase "Ozl - ????" as ozl
+     
+
+    }
+
+    package obw-przek-Zwbl {
+    
+        usecase "it - kontrola niezajętości szlaku" as it
+        usecase "S - sygnałowy semafora wjazdowego" as s
+        usecase "SSz - sygnałowy sygnału zastępczego semafora wjazdowego" as ssz
+
+        usecase "Kc - kontrola światła czerwonego semafora wjazdowego" as kc2
+
+        usecase "Ozl - ????" as ozl2
+        
+
+    }
+
+
+
+
+
+    
+}
+
+ixl --> pml
+ixl --> kc
+ixl --> kpz
+ixl --> ozl
+ixl --> it
+ixl --> s
+ixl --> ssz
+ixl --> kc2
+ixl --> ozl2
+ixl --> sx : 1..*
+ixl --> kn : 1..*
+
+@enduml
