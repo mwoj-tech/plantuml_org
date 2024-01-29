@@ -1,0 +1,33 @@
+@startuml
+title Planowanie misji
+start
+:[ ] włącz edge workspace mission planning;
+:[ ] włącz metrodykę robienia nalotów ACOI;
+:[ ] uruchom qgis;
+:stwórz warstwy w CS92:
+- semafory skrajne (punkt)
+- granice lotów (punkt)
+- starty (punkt)
+- wektory lotów (linia)
+- fotopunkty (puntków, co 250 m)
+;
+
+:[ ] identyfikacja puntków skrajnych (semaforów, lub shp, lub W11a) poprzez lokalizację liniową;
+
+:[ ] narysowanie wektorów puntkowych z oznaczneanimi i kilometrzażem semaforów;
+
+:[ ] wyznaczenie głównych osi przelotu;
+
+:[ ] pomiar odległości między skarjnymi semaforami danej osi przelotu i podział na ok 1 km odcinki;
+
+:[ ] narysowanie wektoró punktowych granic misji;
+:[ ] narysowanie linioweych wektorów lotu pomiędzy granicami misji;
+:[ ] wygenerowanie buforów żeby sprawdzić czy cały AoI jest pokryty;
+:[ ] narysowanie miejsć startu;
+:[ ] narysowanie fotopunktów co 250 m;
+
+
+
+
+stop
+@enduml

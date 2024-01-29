@@ -1,0 +1,57 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor eap as eap
+package ixl {
+
+    package obw-przek-sygn-wyj {
+    
+        usecase "Op - Otrzymanie pozwlolenia" as op
+        usecase "Dp - Danie pozwolenia na wyjazd w określonym kierunku" as dp
+        usecase "Wbl - Włączenie blokady" as wbl
+        usecase "Pwl - Przeciwwtórność liniowa" as pwl
+        usecase "pS -przekaźnik powtarzajacy sygnałów wyjazdowych" as ps
+
+    }
+
+    package obwod-swiatel-sem-wyj_lub_obwodPrzekaznikowPomocniczychWjazdowIwyjazadow {
+    
+        usecase "Pwl - przeciwwtórność lionowa" as pwl1
+        
+        
+
+    }
+
+     package obwod-sygnalowy-wjazdu {
+    
+        usecase "W - przekaźnik włączający układ rejestracji wjazdu pociągu" as w
+        
+        
+
+    }
+
+
+    package ??? {
+            
+        usecase "Ozl** - w przypadku zabudowy blokady na nastawni wykonawczej" as ozl
+        
+
+    }
+
+
+
+
+    
+}
+
+eap --> op
+eap --> dp
+eap --> wbl
+eap --> pwl
+eap --> ps
+eap --> pwl1
+eap --> ozl
+eap --> w
+eap -- ozl
+
+@enduml

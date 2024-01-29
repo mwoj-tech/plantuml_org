@@ -1,12 +1,11 @@
 @startuml
 left to right direction
 skinparam packageStyle rectangle
-actor eap
-actor IXL
-rectangle checkout {
-eap -- (checkout)
-(checkout) .> (payment) : include
-(help) .> (checkout) : extends
-(checkout) -- IXL
+actor IXL as ixl
+package eap {
+usecase "Kc" as UC1
 }
+
+ixl --> UC1
+
 @enduml
