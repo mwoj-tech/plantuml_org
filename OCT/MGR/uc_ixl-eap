@@ -51,12 +51,19 @@ package eap {
 
        usecase "Kpz - kontorla światł. pomrań. i ziel. semafora wjazdowego" as kpz3
 
-
         
+        usecase "Jt - pierwszy odcinek izolowany za samaforem wjazdowym" as jt
+
+        usecase "Jz - pierwsza izolowana zwrotnica za samaforem wjazdowym" as jz
 
     }
 
+    package Uklad-zasilania {
+    
+       usecase "+24V/-24V" as zas
+       
 
+    }
 
 
 
@@ -76,5 +83,5 @@ ixl --> sx : 1..*
 ixl --> kn : 1..*
 ixl --> kc3
 ixl --> kpz3
-
+ixl --> zas
 @enduml

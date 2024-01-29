@@ -10,17 +10,34 @@ package ixl {
         usecase "Dp - Danie pozwolenia na wyjazd w określonym kierunku" as dp
         usecase "Wbl - Włączenie blokady" as wbl
         usecase "Pwl - Przeciwwtórność liniowa" as pwl
-        usecase "Ps" as ps
+        usecase "pS -przekaźnik powtarzajacy sygnałów wyjazdowych" as ps
 
     }
 
-    package obw-swiatel-sem-wyj {
+    package obwod-swiatel-sem-wyj_lub_obwodPrzekaznikowPomocniczychWjazdowIwyjazadow {
     
         usecase "Pwl - przeciwwtórność lionowa" as pwl1
-        usecase "Ozl" as ozl
+        
         
 
     }
+
+     package obwod-sygnalowy-wjazdu {
+    
+        usecase "W - przekaźnik włączający układ rejestracji wjazdu pociągu" as w
+        
+        
+
+    }
+
+
+    package ??? {
+            
+        usecase "Ozl** - w przypadku zabudowy blokady na nastawni wykonawczej" as ozl
+        
+
+    }
+
 
 
 
@@ -34,5 +51,7 @@ eap --> pwl
 eap --> ps
 eap --> pwl1
 eap --> ozl
+eap --> w
+eap -- ozl
 
 @enduml
