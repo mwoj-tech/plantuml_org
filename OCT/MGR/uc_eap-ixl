@@ -18,8 +18,6 @@ package ixl {
     
         usecase "Pwl - przeciwwtórność lionowa" as pwl1
         
-        
-
     }
 
      package obwod-sygnalowy-wjazdu {
@@ -37,9 +35,6 @@ package ixl {
         
 
     }
-
-
-
 
     
 }
