@@ -1,8 +1,8 @@
 @startuml
 left to right direction
 skinparam packageStyle rectangle
-actor ixl as ixl
-package eap {
+actor IXL as IXL
+package LB {
 
     package obw_włacz_blok {
 
@@ -70,18 +70,18 @@ package eap {
     
 }
 
-ixl --> pml
-ixl --> kc
-ixl --> kpz
-ixl --> ozl
-ixl --> it
-ixl --> s
-ixl --> ssz
-ixl --> kc2
-ixl --> ozl2
-ixl --> sx : 1..*
-ixl --> kn : 1..*
-ixl --> kc3
-ixl --> kpz3
-ixl --> zas
+IXL --> pml
+IXL --> kc
+IXL --> kpz
+IXL --> ozl
+IXL --> it
+IXL --> s
+IXL --> ssz
+IXL --> kc2
+IXL --> ozl2
+IXL --> sx : 1..*
+IXL --> kn : 1..*
+IXL --> kc3
+IXL --> kpz3
+IXL --> zas
 @enduml

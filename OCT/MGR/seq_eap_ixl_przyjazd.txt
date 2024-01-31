@@ -1,8 +1,8 @@
 @startuml
 title Stacja przyjmująca wjazd
 alt Pml [IXL] odwzbudzony
-alt Kc or Kpz [IXL] wzbudzony
-LB -> LB: Poz↑
+alt Kc or Kpz sem. wj. [IXL] wzbudzony
+LB -> LB: Pozwolono na... (Poz↑)
 else Kc and Kpz odwzbudzony
 LB -> LB: Poz⤓
 end
@@ -12,9 +12,9 @@ end
 
 group Danie pozwolenia
 alt Pml [IXL] odwzbudzony
-LB -> IXL: Dp↓ 
+LB -> IXL: Danie pozwolenia (Dp↓) 
 else 
-LB -> LB: Dp⤒ 
+LB -> LB: Brak dania pozwolenia Dp⤒ 
 end
 group Wjazd na stację
 IXL -> LB: it↓ ???
@@ -23,12 +23,12 @@ IXL -> LB: it↑ ???
 LB -> IXL: W
 end
 group Zwórcenie bloku końcowego
-alt jeśli S, SS [IXL] odwzbudzone
-LB -> LB: Zwbl↑
+alt jeśli wjazdowe S, Ssz [IXL] odwzbudzone
+LB -> LB: Zwolnienie blokady (Zwbl↑)
 else
-LB -> LB: Zwbl⤓
+LB -> LB: Brak zwolnienia blokady (Zwbl⤓)
 end
-LB -> IXL: Dp↑
+LB -> IXL: Cofnięcie dania pozwolenia (Dp↑)
 end
 
 @enduml
