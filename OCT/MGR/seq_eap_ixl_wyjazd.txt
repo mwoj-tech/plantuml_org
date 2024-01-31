@@ -1,15 +1,26 @@
 @startuml
+title stacja wyprawiajaca pociąg
 group Włączenie blokady
+alt jeśli Pml odwzwbudzony [IXL]
 LB -> IXL: Włączenie blokady (Wbl↑)
+else
+LB -> IXL: Nie można włączyć blokady (Wbl⤓)
 end
-group Danie pozwolenia
+group Otrzymanie pozwolenia
 LB -> IXL: Przeciwtórność liniowa załączona (Pwl↑) 
+alt jeśli Pml odwzwbudzony [IXL]
 LB -> IXL: Optrzymano pozwolenie (Op↑)
+else
+LB -> IXL: Nie otrzymano pozwolenie (Op⤓)
+end
 LB -> LB: Nc↓
 LB -> IXL: Włączenie blokady cofnięte (Wbl↓)
 end
 group Wyjazd ze stacji A
 IXL -> LB: Na sem. wyj. sygnał zezw. (SA↑* lub Pml↑**)
+
+IXL -> LB: pS↑
+
 LB -> IXL: Przeciwtórność liniowa cofnięta (?) (Pwl↓) (bocznikowany)
 IXL -> LB: Pociąg minął semafor wyjazdowy (SA↓ lub Pml↓)
 end

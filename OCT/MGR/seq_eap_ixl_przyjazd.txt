@@ -1,6 +1,20 @@
 @startuml
+title Stacja przyjmująca wjazd
+alt Pml [IXL] odwzbudzony
+alt Kc or Kpz [IXL] wzbudzony
+LB -> LB: Poz↑
+else Kc and Kpz odwzbudzony
+LB -> LB: Poz⤓
+end
+else
+LB -> LB: Poz⤓
+end
+
 group Danie pozwolenia
+alt Pml [IXL] odwzbudzony
 LB -> IXL: Dp↓ 
+else 
+LB -> LB: Dp⤒ 
 end
 group Wjazd na stację
 IXL -> LB: it↓ ???
@@ -9,6 +23,12 @@ IXL -> LB: it↑ ???
 LB -> IXL: W
 end
 group Zwórcenie bloku końcowego
+alt jeśli S, SS [IXL] odwzbudzone
+LB -> LB: Zwbl↑
+else
+LB -> LB: Zwbl⤓
+end
 LB -> IXL: Dp↑
 end
+
 @enduml
