@@ -1,0 +1,20 @@
+@startuml
+group Włączenie blokady
+LB -> IXL: Włączenie blokady (Wbl↑)
+end
+group Danie pozwolenia
+LB -> IXL: Przeciwtórność liniowa załączona (Pwl↑) 
+LB -> IXL: Optrzymano pozwolenie (Op↑)
+LB -> LB: Nc↓
+LB -> IXL: Włączenie blokady cofnięte (Wbl↓)
+end
+group Wyjazd ze stacji A
+IXL -> LB: Na sem. wyj. sygnał zezw. (SA↑* lub Pml↑**)
+LB -> IXL: Przeciwtórność liniowa cofnięta (?) (Pwl↓) (bocznikowany)
+IXL -> LB: Pociąg minął semafor wyjazdowy (SA↓ lub Pml↓)
+end
+group Zwrócenie bloku końcowego
+LB -> IXL: Otrzymanie pozwolenia cofnięte Op↓
+end
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+group Danie pozwolenia
+LB -> IXL: Dp↓ 
+end
+group Wjazd na stację
+IXL -> LB: it↓ ???
+IXL -> LB: iz↓ ???
+IXL -> LB: it↑ ???
+LB -> IXL: W
+end
+group Zwórcenie bloku końcowego
+LB -> IXL: Dp↑
+end
+@enduml
