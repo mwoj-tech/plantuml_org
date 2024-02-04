@@ -1,5 +1,7 @@
 @startuml
 title Stacja przyjmująca wjazd
+
+group Wlaczenie-blokady
 alt Pml [IXL] odwzbudzony
 alt Kc or Kpz sem. wj. [IXL] wzbudzony
 LB -> LB: Pozwolono na... (Poz↑)
@@ -9,12 +11,14 @@ end
 else
 LB -> LB: Poz⤓
 end
+end
 
 group Danie pozwolenia
 alt Pml [IXL] odwzbudzony
 LB -> IXL: Danie pozwolenia (Dp↓) 
 else 
 LB -> LB: Brak dania pozwolenia Dp⤒ 
+end
 end
 group Wjazd na stację
 IXL -> LB: it↓ ???

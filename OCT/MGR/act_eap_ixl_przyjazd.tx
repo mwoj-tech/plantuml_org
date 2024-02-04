@@ -1,55 +1,72 @@
 @startuml
 
 
-|Eap|
+|IXL|
 start
 
 partition Wlaczenie-blokady {
-:Wciśnięcie Wbl;
 
-
-|#AntiqueWhite|IXL|
 
 if (Pml odwzubodzony) then (yes)
-|Eap|
-:Wbl up;
-:Pwl up;
+	if (Kc lub Kpz wzbudzony) then (yes)
+	|Eap|
+	:Poz up;
+
+	
+	else (no)
+	stop
+	endif
 else (no)
+
 stop
 endif
 }
 
-partition Otrzymanie-pozwolenia {
+partition Danie-pozwolenia {
 |#AntiqueWhite|IXL|
 if (Pml odwzubodzony) then (yes)
 |Eap|
-:Op up;
-:Wbl down;
+:Dp down;
+
 else (no)
 stop
 endif
 
 }
 
-partition Wyjazd-ze-stacji-odprawiającej {
+partition Wjazd-na-stacje-przyjmujca {
 
 |IXL|
-:SA lub Pml up;
-:pS up;
+:it down;
+:iz down;
+:it up;
 
 |Eap|
-:Pwl down;
+:W up;
 
 
 |#AntiqueWhite|IXL|
 
-:SA lub Pml down;
+
 
 }
 
-|Eap|
-:Op down;
 
+partition Zwolnienie-bloku-koncowego {
+
+|IXL|
+if (S i Ssz odwzubodzony) then (yes)
+
+|Eap|
+
+:Zwbl  up;
+:Dp up;
+
+else (no)
+stop
+endif
+
+}
 
 
 
