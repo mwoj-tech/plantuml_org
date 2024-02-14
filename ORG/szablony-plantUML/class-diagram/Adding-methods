@@ -1,0 +1,26 @@
+@startuml
+Object <|-- ArrayList
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
+
+class Dummy {
+String data
+void methods()
+}
+class Flight {
+flightNumber : Integer
+departureTime : Date
+}
+
+/'You can use {field} and {method} modifiers to override default behaviour of the parser about fields
+and methods.
+'/
+
+class Dummy {
+{field} A field (despite parentheses)
+{method} Some method
+}
+
+@enduml

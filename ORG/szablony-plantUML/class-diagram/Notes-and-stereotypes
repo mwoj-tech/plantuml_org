@@ -1,0 +1,22 @@
+/'Stereotypes are defined with the class keyword, << and >>.
+You can also define notes using note left of , note right of , note top of , note bottom of key-
+words.
+You can also define a note on the last defined class using note left, note right, note top, note
+bottom.
+A note can be also define alone with the note keywords, then linked to other objects using the .. symbol.'/
+
+
+@startuml
+class Object << general >>
+Object <|--- ArrayList
+
+note top of Object : In java, every class\nextends this one.
+
+note "This is a floating note" as N1
+note "This note is connected\nto several objects." as N2
+Object .. N2
+N2 .. ArrayList
+
+class Foo
+note left: On last defined class
+@enduml
