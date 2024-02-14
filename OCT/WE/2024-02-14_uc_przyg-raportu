@@ -94,11 +94,9 @@ oct2 --> UC4
 oct2 --> UC5
 th --> UC6
 oct --> UC7
-oct -- UC8
+
 UC7 .> UC9 : include
 UC7 -[hidden]- UC9
-
-oct --> UC12
 
 oct --> UC22
 UC22 .>  UC14 : include
@@ -134,5 +132,10 @@ UC23 .> UC10: exclude
 UC23 .> UC11: exclude
     UC23 -[hidden]- UC11: exclude
 
+UC23 .> UC12: exclude
+    UC23 -[hidden]- UC12: exclude
+
+UC7 .> UC8: include
+    UC7 -[hidden]- UC8: exclude
 
 @enduml
