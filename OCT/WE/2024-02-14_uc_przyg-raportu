@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Klient as th
+actor Weryfikator_wydający_Raport_W as oct
+
+package Dokumentacja {
+    usecase "Srawdza kompletność globalną \n (na podst. pliku org)" as UC1
+}
+
+package Raport {
+    usecase "Wprowadza popr. edyc." as UC2
+}
+
+oct --> UC1
+oct --> UC2
+
+@enduml
