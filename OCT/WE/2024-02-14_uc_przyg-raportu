@@ -2,18 +2,64 @@
 left to right direction
 skinparam packageStyle rectangle
 
-actor Klient as th
+
 actor Weryfikator_wydający_Raport_W as oct
+actor Pomocnik as oct2
+actor Klient as th
 
 package Dokumentacja {
-    usecase "Srawdza kompletność globalną \n (na podst. pliku org)" as UC1
+    
+    usecase "Srawdza kompletność globalną \n " as UC1
+
+        note right of UC1 : (na podst. \n pliku org)
+
+    usecase "Wystawia listę braków" as UC2
+
+        note right of UC2 : jeśli są.
+
+    usecase "Dosyła braki" as UC6
+         
+         note right of UC6 : jeśli są.
+
+    usecase "Pobiera lokalnie dokumentację przysłaną" as UC10
+
+    usecase "Pobiera lokalnie załączniki WS" as UC11
+
+    usecase "Podmienia załączniki w dokumenacji przyslanej" as UC12
+    
+}
+
+package Narzędzia-Automatyzacji {
+
+    usecase "Tworzy spis arkuszy xlsx" as UC4
+
+    usecase "Wypełnia bazę danych.xls" as UC5
+
+    usecase "Generuje Rozdział3" as UC7
+
+    usecase "Sprawdza czy są błędy" as UC8
+
+    usecase "Poprawia Numeracje" as UC9
+
+        note right of UC9 : TODO: Zautomatyzować
+
 }
 
 package Raport {
-    usecase "Wprowadza popr. edyc." as UC2
+    usecase "Wprowadza popr. edyc." as UC3
 }
 
 oct --> UC1
 oct --> UC2
+oct --> UC3
+oct2 --> UC4
+oct2 --> UC5
+th --> UC6
+oct --> UC7
+oct -- UC8
+oct --> UC9
+oct --> UC10
+oct --> UC11
+oct --> UC12
 
 @enduml
