@@ -9,15 +9,27 @@ actor Klient as th
 
 package Dokumentacja {
     
-    usecase "Srawdza kompletność globalną [ ] " as UC1
+    
+    usecase "Sprawdza kompletność globalną [ ] \n na podst. ORG" as UC1
 
-        note right of UC1 : (na podst. \n pliku org)
+    usecase "Kompletuje paczkę dla UTK [ ]" as UC23
+
+    usecase "Nadaje numery folderów jak w wykazie [ ]" as UC24
+
+    
+    usecase "Porównuje 'SA' z plik ORG [x]" as UC20
+    
+    usecase "Porównuje plik ORG z SA [x] " as UC21
+    
+    usecase "Szuka braków na SP TH [ ]" as UC13
+
+   
 
     usecase "Wystawia listę braków [ ]" as UC2
 
-        note right of UC2 : jeśli są.
+    
 
-    usecase "Dosyła braki[ ]" as UC6
+    usecase "Dosyła braki [ ]" as UC6
          
          note right of UC6 : jeśli są.
 
@@ -26,10 +38,14 @@ package Dokumentacja {
     usecase "Pobiera lokalnie załączniki WS [x]" as UC11
 
     usecase "Podmienia załączniki w dokumenacji przyslanej [ ]" as UC12
+
+
     
 }
 
 package Narzędzia-Automatyzacji {
+
+    
 
     usecase "Tworzy spis arkuszy xlsx [ ]" as UC4
 
@@ -42,24 +58,81 @@ package Narzędzia-Automatyzacji {
     usecase "Poprawia Numeracje [ ]" as UC9
 
         note right of UC9 : TODO: Zautomatyzować
+    
+    
+    
 
 }
 
 package Raport {
+
+    
+
     usecase "Wprowadza popr. edyc.[ ]" as UC3
+
+    usecase "Wprowadza rozdziały [ ]" as UC22
+
+    usecase "Wprowadza rozdz. 3 - Dokumentacja [ ]" as UC14
+
+    usecase "Wprowadza rozdz. 4 - Świad. dop. [ ]" as UC15
+
+    usecase "Wprowadza rozdz. 5 - DTR [ ]" as UC16
+
+    usecase "Wprowadza rozdz. 7 - Protok. odb. [ ]" as UC17
+
+    usecase "Wprowadza rozdz. 8 - Protok. pom. [ ]" as UC18
+
+        note right of UC18 : przeanalizować czy \n warto
+
+    usecase "Wprowadza rozdz. 10 - Inne dok. [ ]" as UC19
 }
 
-oct --> UC1
-oct --> UC2
+oct --> UC23
+
 oct --> UC3
 oct2 --> UC4
 oct2 --> UC5
 th --> UC6
 oct --> UC7
 oct -- UC8
-oct --> UC9
-oct --> UC10
-oct --> UC11
+UC7 .> UC9 : include
+UC7 -[hidden]- UC9
+
 oct --> UC12
+
+oct --> UC22
+UC22 .>  UC14 : include
+    UC22 -[hidden]- UC14 : include
+UC22 .> UC15 : include
+    UC22 -[hidden]- UC15 : include
+UC22 .> UC16 : include
+    UC22 -[hidden]- UC16 : include
+UC22 .> UC17 : include
+    UC22 -[hidden]- UC17 : include
+UC22 .> UC18 : include
+    UC22 -[hidden]- UC18 : include
+UC22 .> UC19 : include
+    UC22 -[hidden]- UC19 : include
+UC1 .> UC20: include
+    UC1 -[hidden]- UC20: include
+UC1 .> UC21: include
+    UC1 -[hidden]- UC21: include
+
+UC23 .> UC1: include
+    UC23 -[hidden]- UC1: include
+
+UC23 .> UC24: include
+    UC23 -[hidden]- UC24: include
+
+UC1 .> UC13: exclude
+    UC1 -[hidden]- UC13: exclude
+UC1 .> UC2: exclude
+    UC1 -[hidden]- UC2: exclude
+
+UC23 .> UC10: exclude
+    UC23 -[hidden]- UC10: exclude
+UC23 .> UC11: exclude
+    UC23 -[hidden]- UC11: exclude
+
 
 @enduml
