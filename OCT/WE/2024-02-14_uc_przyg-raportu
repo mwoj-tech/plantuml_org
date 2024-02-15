@@ -39,7 +39,7 @@ package Dokumentacja {
 
     usecase "Podmień załączniki w dokumenacji przyslanej [ ]" as UC12
 
-    usecase "Zapisuj ścieżki podmienionych plików w notatniku [ ]" as UC27
+    usecase "Zapisuj ścieżki podmienionych plików w notatniku [ ] \n (jeśli dot. dok. proj. i zm. się nazw. pliku)" as UC27
 
     
 }
@@ -134,9 +134,9 @@ UC1 .> UC2: exclude
 
 UC12 .> UC10: include
     UC12 -[hidden]- UC10
-UC12 .> UC11: include
+UC12 .> "0..*" UC11: include
     UC12 -[hidden]- UC11
-UC12 .> UC27: include
+UC12 .> "0..*" UC27: include
     UC12 -[hidden]- UC27
 
 UC23 .> UC12: include
