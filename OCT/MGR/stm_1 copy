@@ -3,34 +3,20 @@
 scale 350 width
 [*] --> State1
 
-State1 : neutralny
-State2: przyjazd w trakcie ustawiania
-State3: przyjazd - nie wykorzytane pozwolenie
-State4: przyjazd - wolna droga u sąsiada
-State5: przyjazd - pociąg na szlaku
-State6: przyjazd - pociąg za semaforem wjazdowym
-State7: przyjazd - możliość obsługi polecenia Ko
-State8: przyjazd - w trakcie zwalniania
-State9: przyjazd - po obsłudze dKo
-State10: przyjazd - po obsłudze dKo i wjeździe pociągu za semafor
-State11: przyjazd - możliwość dKo
+State1 : Na sem. wyj. nie podano sygn. zezw.
+State2: Włączenie blokady
+State3: Otrzymanie pozwolenia
+State4: przyjazd - Wyjazd ze stacji odprawiającej
+State5: wyjazd ze st. odprawiającej
+
+
 
 
 State1 -> State2: Wbl
-State2 <- State1: oWbl
-State2 -> State3: Poz
-State3 -> State4: *Pml
-State3 -> State5: dPo
-State4 -> State5: */Pml
-State5 -> State6: */Kc; *Kpz; */It
-State6 -> State7: *It, */Iz
-State7 -> State1: Ko
-State5 -> State9: dKo
-State9 -> State10: */It
-State10 -> State11: *It, */Iz
-State11 -> State1: Ko
-State3 -> State8: oWbl
-State8 -> State1: oWbl
+State2 -> State2: oWbl
+State3 -> State4: Poz
+State4 -> State5: xx
+State5 -> State1: xy
 
 
 

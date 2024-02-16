@@ -47,8 +47,11 @@ partition Wyjazd-ze-stacji-odprawiającej {
 
 }
 
+partition Zwrocenie-bloku-koncowego {
 |Eap|
 :Op down;
+
+}
 
 
 
