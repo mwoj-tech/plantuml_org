@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+title "tryb porównywania"
+actor "User" as an
+rectangle "Instancja warstwy" {
+usecase "Steruj przezroczystoscia" as UC1
+usecase "Usuń warstwe" as UC2
+usecase "Przeciągnij warstwę (w góre lub dół)" as UC3
+usecase "Widzi tytuł warstwy" as UC4
+usecase "Centruj do warstwy (mapy)" as UC5
+usecase "Widzi miniaturkę mapy" as UC6
+usecase "Uruchamia ustawienia warstwy" as UC7
+usecase "Przełącza na widocznie lub niewidoczne granice mapy" as UC8
+}
+an --> UC1
+an --> UC2
+an --> UC3
+an --> UC4
+an --> UC5
+UC6 <. UC5: include
+an --> UC7
+@enduml
