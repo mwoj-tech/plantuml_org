@@ -1,0 +1,248 @@
+@startuml
+note left of KartaPrzebiegu
+   Polecenie - treść polecenia do wprowadzenia w celu nastawienia przebiegu
+Z - przebieg zasadniczy
+W - przebieg wariantowy
+V - dopuszczalna prędkość [km/h]
+ZDO - czas zwolnienia drogi ochronnej przebiegu [s]
+ZCZ - czas zwolnienia czasowego przebiegu [s]
+OPS - czas opóźnienia wyświetlania sygnału zezwalającego, w przypadku zajętości odcinka
+zbliżania
+W20 - Wskaźnik braku drogi hamowania:
+B - brak wskaźnika,
+N - wskaźnik wykonany z materiałów odblakowych,
+W - wskaźnik wyświetlany,
+end note
+
+class KartyPrzebiegów {
+    - biuroProj: string
+    - IM: string
+    - wersjaBazyDanych: string
+    - data: date DD-MM-YYYY
+    - edycjaDokumentu: Double {precision: 1}
+    - PracownicyBiuraProj: List<PracownikBiuraProj>
+
+}
+
+class KartaPrzebiegu {
+  - lokalizacja: Lokalizacja
+  - polecenie: List<SkladowaPolecenia>
+  - numer: int
+  - typPolecenia: {POC, MAN}
+  - sygnal: Sygnal
+  - z/w: {Z, W}
+  - zdo: int
+  - zcz: int
+  - vMax: string
+  - ops: int
+  - uwagi: string
+  - elementy: List<Element>
+  - uzaleznionePrzejazdy: List<PrzejazdPrzejscieUzalezniony>
+  - blokada: string
+  - wykluczenia: List<PrzbiegSprzeczny>
+  - edycjaKarty: 
+  - strona: string ???
+
+}
+
+class Lokalizacja{
+    nazwaPosterunku:string NOTNULL
+    skrót: string
+}
+
+class Sygnal {
+    -sem: string
+    -vmax: int {indeks górny}
+    -naTor: string {indeks dolny}
+
+
+}
+
+class ElementyDrogiPrzebiegu {
+    - zwrotnice : List<Zwrotnica>
+    - wykolejnice : List<Wykolejnica>
+    - skrzyżowania : List<Skrzyżowanie>
+    - iz : List<OdcinekZwrotnicowy>
+    - it : List<OdcinekTorowy>
+}
+
+class ElementyDrogiJazdy {
+    - zwrotnDrogiJazdy : List<Zwrotnica>
+    - wykolejnDrogiJazdy : List<Wykolejnica>
+    - skrzyzDrogiJazdy : List<Skrzyżowanie>
+    - izDrogiJazdy : List<OdcinekZwrotnicowy>
+    - itDrogiJazdy : List<OdcinekTorowy>
+}
+
+class ElementyDrogiOchr {
+    - zwrotnDrogiOchr : List<Zwrotnica>
+    - wykolejnDrogiOchr : List<Wykolejnica>
+    - skrzyzDrogiOchr : List<Skrzyżowanie>
+    - izDrogiOchr : List<OdcinekZwrotnicowy>
+    - itDrogiOchr : List<OdcinekTorowy>
+}
+
+class ElementyOchrBoczn {
+    - zwrotnOchrBoczn : List<Zwrotnica>
+    - wykolejnOchrBoczn : List<Wykolejnica>
+    - skrzyzOchrBoczn : List<Skrzyżowanie>
+    - izOchrBoczn : List<OdcinekZwrotnicowy>
+    - itOchrBoczn : List<OdcinekTorowy>
+}
+
+class Zwrotnica {
+    - numer : string
+    - typ: {P,L}
+    - polożenienie: {+, -}
+}
+
+class Wykolejnica {
+    - numer : string
+    - typ: {N}
+    - polożenienie
+}
+
+class SkrzyzowanieTorow {
+    - numer : string
+    
+}
+
+class OdcinekTorowy {
+    - nazwOdcTor: string
+}
+
+class OdcinekZwrotnicowy {
+    - nazwOdcZwr: string
+}
+
+class DrogaPrzebiegu {
+    - elementyDrogiPrzebiegu: ElementyDrogiPrzebiegu
+    - elementyDrogiJazdy: ElementyDrogiJazdy
+    - elementyDrogaOchronej: ElementyDrogiOchronnej
+    - elementyOchronaBoczna: ElementyOchronyBocznej
+    
+}
+
+class SkladowaPolecenia {
+    - polecPoczPrzeb: PolecPoczPrzeb NOTNULL
+    - polecKoncPrzeb: PolecKoncPrzeb NOTNULL
+    - polecPrzebWariant: PolecPrzebWariant
+    - typPolecenia: {POC, MAN} NOTNULL
+}
+
+class PolecPoczPrzeb {
+    - idObiektuPocz: string NOTNULL
+    - nazwaSemPocz: string NOTNULL
+}
+
+class PolecKoncPrzeb {
+    - idObiektuKonc: string NOTNULL
+    - nazwaElemeKonc: string NOTNULL
+'koncem przebieg nie musi byc semafor
+}
+
+class PolecPrzebWariant {
+    - idObiektuZwrotnicy: string NOTNULL
+    - idZwrotnicy: string NOTNULL
+}
+
+
+
+
+
+
+class PrzejazdPrzejscieUzalezniony {
+  - km: Double {precision: 3}  
+}
+
+class PrzebiegSprzeczny {
+- numer: int
+- sygnal: SygnalPrzebSprzeczn
+- zToru: string
+- naTor: string
+- z/w: {Z/W}
+}
+
+class SygnalPrzebSprzeczn {
+- oznSygnalPrzebSprzeczn: string
+- vSygnalPrzebSprzeczn: {1,2,3,4,50}
+
+}
+
+class PracownikBiuraProj {
+  - imieINazwisko: string NOTNULL
+  - tyutł: string
+}
+
+class Projektant {
+  - numerUprawnien: string NOTNULL
+  - podpis: image   NOTNULL
+}
+
+class Sprawdzajacy {
+  - numerUprawnien: string NOTNULL
+  - podpis: image NOTNULL
+}
+
+class Opracowujący {
+  - numerUprawnien: string
+  - podpis: image
+}
+
+
+
+
+KartyPrzebiegów "1" -- "0..*" KartaPrzebiegu
+KartyPrzebiegów "1" -- "0..*" PracownikBiuraProj
+KartaPrzebiegu "1" -- "1*" SkladowaPolecenia
+KartaPrzebiegu "1" -- "0..*" PrzejazdPrzejscieUzalezniony
+PracownikBiuraProj "1" <|-- "1" Sprawdzajacy
+PracownikBiuraProj "1" <|-- "0..*" Projektant
+PracownikBiuraProj  "1" <|-- "0..*" Opracowujący
+KartaPrzebiegu "1" -- "1" Sygnal
+KartaPrzebiegu "1" -- "1" DrogaPrzebiegu
+DrogaPrzebiegu "1" -- "1..*" ElementyDrogiPrzebiegu
+DrogaPrzebiegu "1" -- "1..*" ElementyDrogiJazdy
+DrogaPrzebiegu "1" -- "1..*" ElementyDrogiOchr
+DrogaPrzebiegu "1" -- "1..*" ElementyOchrBoczn
+KartaPrzebiegu "1" -- "1..*" Lokalizacja
+SkladowaPolecenia -- PolecPoczPrzeb
+SkladowaPolecenia -- PolecKoncPrzeb
+SkladowaPolecenia -- "0..*"PolecPrzebWariant
+KartaPrzebiegu "1" -- "1..0"PrzebiegSprzeczny
+PrzebiegSprzeczny -- SygnalPrzebSprzeczn
+ElementyDrogiPrzebiegu -- "1..*" Zwrotnica
+ElementyDrogiPrzebiegu -- SkrzyzowanieTorow
+ElementyDrogiPrzebiegu -- Wykolejnica
+ElementyDrogiPrzebiegu -- OdcinekTorowy
+ElementyDrogiPrzebiegu -- OdcinekZwrotnicowy
+ElementyDrogiJazdy -- "1..*" Zwrotnica
+ElementyDrogiJazdy -- SkrzyzowanieTorow
+ElementyDrogiJazdy -- Wykolejnica
+ElementyDrogiJazdy -- OdcinekTorowy
+ElementyDrogiJazdy -- OdcinekZwrotnicowy
+ElementyDrogiOchr -- "1..*" Zwrotnica
+ElementyDrogiOchr -- SkrzyzowanieTorow
+ElementyDrogiOchr -- Wykolejnica
+ElementyDrogiOchr -- OdcinekTorowy
+ElementyDrogiOchr -- OdcinekZwrotnicowy
+ElementyOchrBoczn -- "1..*" Zwrotnica
+ElementyOchrBoczn -- SkrzyzowanieTorow
+ElementyOchrBoczn -- Wykolejnica
+ElementyOchrBoczn -- OdcinekTorowy
+ElementyOchrBoczn -- OdcinekZwrotnicowy
+
+
+
+
+
+
+@enduml
+
+'pytania
+'czy karty przebiegu są dla okregu nastwaczego czy całego nazwaPosterunku
+'czy w polecniu mogą byc 2 różne posterunki/okręgi np. WRK,A,WAW,H?
+'czy zdażył się kiedykowliek przypadek że było więcej niż jeden przebieg wariatnowy?
+'czy atrybut Vmax (w KartaPrzebiegu) może mieć inne wartości niż {25, 40, 50, 70,,80,90,110 120,130,140,150 }?
+'atrybuty wykolejnicy ?????? 
+'jak wyglada skrzyzowanie torow i jego atrybuty

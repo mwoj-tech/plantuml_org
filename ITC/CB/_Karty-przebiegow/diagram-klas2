@@ -1,0 +1,57 @@
+@startuml
+
+class KartaPrzebiegu {
+    - lokalizacja: string
+    - warka: string
+    - polecenie: string
+    - numer: int
+    - z: char
+    - vMaks: int
+    - ops: string
+    - uwagi: string
+    - elementy: Elementy
+    - drogaJazdy: DrogaJazdy
+    - drogaOchronna: string
+    - ochronaBoczna: string
+    - blokada: string
+    - wykazPrzebiegow: WykazPrzebiegow
+    - daneOsobowe: DaneOsobowe
+    - podpis: string
+    - edycja: Edycja
+}
+
+class Elementy {
+    - zwrotnice: string
+    - wykolejnice: string
+    - skrzyzowania: string
+}
+
+class DrogaJazdy {
+    - listaDrog: string
+    - instrukcje: string
+    - sygnaly: string
+}
+
+class WykazPrzebiegow {
+    - nieWykluczajaceSie: string
+}
+
+class DaneOsobowe {
+    - imieINazwisko: string
+    - numerUprawnien: string
+}
+
+class Edycja {
+    - numer: int
+    - projektant: string
+    - data: string
+    - sprawdzajacy: string
+}
+
+KartaPrzebiegu *-- Elementy
+KartaPrzebiegu *-- DrogaJazdy
+KartaPrzebiegu *-- WykazPrzebiegow
+KartaPrzebiegu *-- DaneOsobowe
+KartaPrzebiegu *-- Edycja
+
+@enduml

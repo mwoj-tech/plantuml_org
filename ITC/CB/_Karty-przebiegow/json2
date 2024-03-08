@@ -1,0 +1,131 @@
+@startjson
+{
+  "THALES": {
+    "Lokalizacja": "",
+    "Warka": "Wa"
+  },
+  "Polecenie": {
+    "WRK": true,
+    "A": false,
+    "H3": true,
+    "POC": true
+  },
+  "Numer": {
+    "4": {
+      "POC": "A",
+      "4\n3": "Z Chynowa torem 2C na tor 3"
+    }
+  },
+  "Z/W": {
+    "Z": true
+  },
+  "ZDO": {
+    "0": {
+      "V maks": 60
+    }
+  },
+  "ZCZ": {
+    "120": {
+      "OPS": true,
+      "W20": true,
+      "B": true,
+      "Uwagi": ""
+    }
+  },
+  "Elementy": {
+    "Zwrotnice, wykolejnice i skrzyżowania": {
+      "JZ": true,
+      "JT": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true
+    }
+  },
+  "Droga Jazdy": {
+    "L": true,
+    "+": true,
+    "P": true,
+    "-": true,
+    "2/3, 4/5, 6, 7": true,
+    "A1, A2, 3": true
+  },
+  "Droga Ochronna": {
+    "1": true
+  },
+  "Ochrona Boczna": {
+    "L": true,
+    "+": true,
+    "1": true
+  },
+  "Blokada": "Uzależnione przejazdy i przejścia",
+  "53.087; 54.959": true,
+  "Wykaz przebiegów sprzecznych nie wykluczających się przez zwrotnice": true,
+  "Nr": {
+    "22": {
+      "E3": true,
+      "4": true,
+      "3": true,
+      "2C": true,
+      "45": true,
+      "M": true,
+      "U2": true,
+      "50": true,
+      "N": true,
+      "W2": true
+    },
+    "109": {
+      "Tm2": true,
+      "m": true,
+      "A2": true,
+      "116": {
+        "E3": true,
+        "m": true,
+        "A2": true
+      },
+      "133": {
+        "H3": true,
+        "m": true,
+        "W2": true
+      },
+      "134": {
+        "H3": true,
+        "m": true,
+        "U2": true
+      },
+      "135": {
+        "H3": true,
+        "m": true,
+        "3b": true
+      },
+      "140": {
+        "Tm21": true,
+        "m": true,
+        "3b": true
+      },
+      "142": {
+        "Tm22": true,
+        "m": true,
+        "M": true
+      },
+      "146": {
+        "Tm23": true,
+        "m": true,
+        "N": true
+      }
+    }
+  },
+  "Imię i nazwisko, numer uprawnień": {
+    "Podpis": true
+  },
+  "Edycja": {
+    "5": {
+      "Projektant": "Jerzy Głąb, BPK-2b-907/57/81",
+      "Data": "12-2019",
+      "Sprawdzający": "Marzena Leszczyńska, 7/04/Kt"
+    }
+  }
+}
+@endjson

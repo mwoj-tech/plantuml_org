@@ -1,0 +1,40 @@
+@startuml
+
+package "Karta Przebiegu" {
+    class Dane {
+        - Lokalizacja: String
+        - Warka: String
+        - Polecenie: String
+        - Numer: int
+        - ZW: String
+        - ZDO: int
+        - Vmax: int
+        - ZCZ: int
+        - OPS: String
+        - Uwagi: String
+        - Elementy: Element[]
+        - DrogaJazdy: String
+        - DrogaOchronna: String
+        - OchronaBoczna: String
+        - Blokada: String
+        - UzależnionePrzejazdy: String
+        - Sygnaly: Sygnal[]
+        - Podpis: String
+        - Edycja: String
+        - Data: String
+    }
+
+    class Element {
+        - Nazwa: String
+        - Wartosc: String
+    }
+
+    class Sygnal {
+        - Nr: int
+        - ZToru: String
+        - NaTor: String
+        - ZW: String
+    }
+}
+
+@enduml

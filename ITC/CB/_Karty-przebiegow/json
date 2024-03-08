@@ -1,0 +1,30 @@
+@startjson
+
+{
+  "class": {
+    "KartaPrzebiegu": {
+      "Lokalizacja": "String",
+      "Polecenie": "String",
+      "Numer": "int",
+      "ZW": "String",
+      "ZDO": "int",
+      "ZCZ": "int",
+      "OPS": "String",
+      "Elementy": "Element[]",
+      "DrogaJazdy": "String",
+      "DrogaOchronna": "String",
+      "OchronaBoczna": "String",
+      "Blokada": "String",
+      "UzależnionePrzejazdy": "String",
+      "ImięINazwisko": "String",
+      "Edycja": "String",
+      "Data": "String"
+    },
+    "Element": {
+      "Rodzaj": "String",
+      "Wartość": "String"
+    }
+  }
+}
+
+@endjson
