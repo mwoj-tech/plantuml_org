@@ -1,11 +1,11 @@
 @startuml
 title Import danych przez aplikację Excel
 start
-:[ ] Uruchamiamy excel;
-:[ ] Dane>Pobierz Dane>Z pliku>Zpliku pdf;
-:[ ] W eksploratorze plikó wybieramy interesującą nas kartę przebiegów;
-:[ ] W okienku nawigatora zanaczamy checkboxem "Wybierz wiele elementów";
-:[ ] Zaznaczamy "Załaduj";
+:import;
+:walidacja;
+:weryfikacja;
+:raport;
+
 
 
 

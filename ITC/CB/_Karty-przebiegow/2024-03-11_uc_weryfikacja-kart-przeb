@@ -1,0 +1,32 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor User
+actor Weryfikator as wer
+rectangle "Modul Weryfikacji Kart Przebiegiw" {
+    usecase "Importuj" as UC1
+    usecase "Wyswietl Raport z Walidacji" as UC8
+    usecase "Weryfikuj" as UC2
+    usecase "Waliduj" as UC3
+    usecase "Wybrane przepisy" as UC9
+    usecase "Na LPU 2013" as UC4
+    usecase "Na LPU 2017" as UC5
+    usecase "Wyswietl Raport z weryfikacji" as UC6
+    usecase "Pobierz Raport z weryfikacji" as UC7
+ 
+    User --> UC1
+    User --> UC2
+    UC1 --> UC3 : <<include>>
+    UC2 --> UC4 : <<exclude>>
+    UC2 --> UC5 : <<exclude>>
+    User --> UC6
+    User --> UC7
+    User --> UC8a
+    UC2 --> UC9 : <<include>>
+    User --> UC8
+
+}
+
+@enduml
