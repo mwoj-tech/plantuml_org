@@ -59,6 +59,9 @@ class Sygnal {
 }
 
 class ElementyDrogiPrzebiegu {
+    - isDrogaJazdy: bool
+    - isDrogaOchronna : bool
+    - isOchronaBoczna : bool
     - zwrotnice : List<Zwrotnica>
     - wykolejnice : List<Wykolejnica>
     - skrzyżowania : List<Skrzyżowanie>
@@ -66,29 +69,10 @@ class ElementyDrogiPrzebiegu {
     - it : List<OdcinekTorowy>
 }
 
-class ElementyDrogiJazdy {
-    - zwrotnDrogiJazdy : List<Zwrotnica>
-    - wykolejnDrogiJazdy : List<Wykolejnica>
-    - skrzyzDrogiJazdy : List<Skrzyżowanie>
-    - izDrogiJazdy : List<OdcinekZwrotnicowy>
-    - itDrogiJazdy : List<OdcinekTorowy>
-}
 
-class ElementyDrogiOchr {
-    - zwrotnDrogiOchr : List<Zwrotnica>
-    - wykolejnDrogiOchr : List<Wykolejnica>
-    - skrzyzDrogiOchr : List<Skrzyżowanie>
-    - izDrogiOchr : List<OdcinekZwrotnicowy>
-    - itDrogiOchr : List<OdcinekTorowy>
-}
 
-class ElementyOchrBoczn {
-    - zwrotnOchrBoczn : List<Zwrotnica>
-    - wykolejnOchrBoczn : List<Wykolejnica>
-    - skrzyzOchrBoczn : List<Skrzyżowanie>
-    - izOchrBoczn : List<OdcinekZwrotnicowy>
-    - itOchrBoczn : List<OdcinekTorowy>
-}
+
+
 
 class Zwrotnica {
     - numer : string
@@ -112,7 +96,7 @@ class OdcinekTorowy {
 }
 
 class OdcinekZwrotnicowy {
-    - nazwOdcZwr: string
+    - nazwOdcZwr: stringclass OdcinekTorowy
 }
 
 class DrogaPrzebiegu {
@@ -202,9 +186,8 @@ PracownikBiuraProj  "1" <|-- "0..*" Opracowujący
 KartaPrzebiegu "1" -- "1" Sygnal
 KartaPrzebiegu "1" -- "1" DrogaPrzebiegu
 DrogaPrzebiegu "1" -- "1..*" ElementyDrogiPrzebiegu
-DrogaPrzebiegu "1" -- "1..*" ElementyDrogiJazdy
-DrogaPrzebiegu "1" -- "1..*" ElementyDrogiOchr
-DrogaPrzebiegu "1" -- "1..*" ElementyOchrBoczn
+
+
 KartaPrzebiegu "1" -- "1..*" Lokalizacja
 SkladowaPolecenia -- PolecPoczPrzeb
 SkladowaPolecenia -- PolecKoncPrzeb
@@ -216,21 +199,7 @@ ElementyDrogiPrzebiegu -- SkrzyzowanieTorow
 ElementyDrogiPrzebiegu -- Wykolejnica
 ElementyDrogiPrzebiegu -- OdcinekTorowy
 ElementyDrogiPrzebiegu -- OdcinekZwrotnicowy
-ElementyDrogiJazdy -- "1..*" Zwrotnica
-ElementyDrogiJazdy -- SkrzyzowanieTorow
-ElementyDrogiJazdy -- Wykolejnica
-ElementyDrogiJazdy -- OdcinekTorowy
-ElementyDrogiJazdy -- OdcinekZwrotnicowy
-ElementyDrogiOchr -- "1..*" Zwrotnica
-ElementyDrogiOchr -- SkrzyzowanieTorow
-ElementyDrogiOchr -- Wykolejnica
-ElementyDrogiOchr -- OdcinekTorowy
-ElementyDrogiOchr -- OdcinekZwrotnicowy
-ElementyOchrBoczn -- "1..*" Zwrotnica
-ElementyOchrBoczn -- SkrzyzowanieTorow
-ElementyOchrBoczn -- Wykolejnica
-ElementyOchrBoczn -- OdcinekTorowy
-ElementyOchrBoczn -- OdcinekZwrotnicowy
+
 
 
 
